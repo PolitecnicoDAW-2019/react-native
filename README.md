@@ -1,4 +1,3 @@
-<br>
 <p align="center">
   <img src="favicon.png" alt="React Logo" width="150" height="100">
 </p>
