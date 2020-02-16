@@ -6,8 +6,8 @@
 
 ## Quick start
 
-- Clone the repository -> `git clone git@github.com:PolitecnicoDAW/react-native.git` : git repository
-  - Warning sudo permits :warning:
+Warning sudo permits :warning:
+
 - Install [Explo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/) for easy technology startup -> `npm install -g expo-cli` : expo-cli@3.13.1
 - Create the project -> `expo init NameProject --npm` : react native project
 - Choose a template -> `Managed workflow > blank`
