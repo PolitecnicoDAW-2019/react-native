@@ -30,4 +30,4 @@ Warning sudo permits :warning:
 
 ## Copyright and license
 
-Code and documentation copyright 2019 the [Ceres Authors](https://github.com/aresigner). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
+Code and documentation copyright 2020 the [Ceres Author - Aresigner](https://github.com/aresigner/) and [Ceres Author - CLlendi](https://github.com/cllendi/). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
