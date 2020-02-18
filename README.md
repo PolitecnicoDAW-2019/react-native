@@ -10,10 +10,7 @@ Warning sudo permits :warning:
 
 - Install [Explo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/) for easy technology startup -> `npm install -g expo-cli` : expo-cli@3.13.1
 - Create the project -> `expo init NameProject --npm` : react native project
-- Choose a template -> `Managed workflow > blank` : continue creation
-
-![](private/_chooseTemplate.png)
-
+- Choose a template -> `Managed workflow > tabs` : continue creation
 - Start the project -> `npm run start` or `expo start` : application execution
 - Download the [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent) application on Android or iOS : expo application
 
@@ -30,4 +27,4 @@ Warning sudo permits :warning:
 
 ## Copyright and license
 
-Code and documentation copyright 2019 the [Ceres Authors](https://github.com/aresigner). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
+Code and documentation copyright 2020 the [Ceres Author - Aresigner](https://github.com/aresigner/) and [Ceres Author - CLlendi](https://github.com/cllendi/). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
