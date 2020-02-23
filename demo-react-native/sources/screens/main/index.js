@@ -60,11 +60,11 @@ class MainScreen extends Component {
 			<View style={main.containerMain}>
 				<Appbar.Header style={main.appbar}>
 					<Appbar.Content
-						title='React Native'
-						subtitle='demo daw'
+						title="React Native"
+						subtitle="demo daw"
 					></Appbar.Content>
 					<Appbar.Action
-						icon='magnify'
+						icon="magnify"
 						onPress={this.handleSearch}
 					></Appbar.Action>
 				</Appbar.Header>
@@ -78,11 +78,11 @@ class MainScreen extends Component {
 
 				<Appbar style={main.footer}>
 					<Appbar.Action
-						icon='twitter'
+						icon="twitter"
 						onPress={() => console.log('Pressed archive')}
 					></Appbar.Action>
 					<Appbar.Action
-						icon='email'
+						icon="email"
 						onPress={() => console.log('Pressed archive')}
 					></Appbar.Action>
 				</Appbar>

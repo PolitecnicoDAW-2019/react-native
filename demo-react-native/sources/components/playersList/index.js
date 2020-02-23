@@ -24,17 +24,17 @@ const PlayersList = ({ players, onDelete }) => {
 					<Card.Actions style={playersList.containerButtons}>
 						<Button style={playersList.icon}>
 							<Icon
-								name='pencil'
-								type='font-awesome'
-								color='#16a0e2'
+								name="pencil"
+								type="font-awesome"
+								color="#16a0e2"
 								size={18}
 							></Icon>
 						</Button>
 						<Button style={playersList.icon} onPress={() => onDelete(player)}>
 							<Icon
-								name='trash'
-								type='font-awesome'
-								color='#16a0e2'
+								name="trash"
+								type="font-awesome"
+								color="#16a0e2"
 								size={18}
 							></Icon>
 						</Button>
