@@ -10,10 +10,7 @@ Warning sudo permits :warning:
 
 - Install [Explo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/) for easy technology startup -> `npm install -g expo-cli` : expo-cli@3.13.1
 - Create the project -> `expo init NameProject --npm` : react native project
-- Choose a template -> `Managed workflow > blank` : continue creation
-
-![](private/_chooseTemplate.png)
-
+- Choose a template -> `Managed workflow > tabs` : continue creation
 - Start the project -> `npm run start` or `expo start` : application execution
 - Download the [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent) application on Android or iOS : expo application
 

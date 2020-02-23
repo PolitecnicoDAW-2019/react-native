@@ -1,93 +1,58 @@
 import React from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  FlatList,
-  View,
-  Text
-} from 'react-native';
-import deleteImage from '../../../assets/images/delete.png';
+import { FlatList, View } from 'react-native';
 import { Button, Card, Title, Paragraph } from 'react-native-paper';
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%'
-  },
-  contentContainer: {
-    flexGrow: 1
-  },
-  listItem: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 15
-  },
-  text: {
-    flex: 1,
-    marginLeft: 5,
-    fontWeight: 'bold'
-  },
-  textDone: {
-    color: '#aaa',
-    textDecorationLine: 'line-through',
-    fontWeight: 'normal'
-  },
-  icon: {
-    width: 20,
-    height: 20
-  },
-  delete: {
-    width: 44,
-    height: 44,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  card: {
-    width: '70%'
-  }
-});
+import { Icon } from 'react-native-elements';
+import { breakLine } from '../../constants';
+import { playersList } from '../../styles';
 
 const PlayersList = ({ players, onDelete }) => {
-  const renderPlayer = player => {
-    return (
-      <View style={styles.listItem}>
-        <Card style={styles.card}>
-          <Card.Content>
-            <Title>{player.item.name}</Title>
-            <Paragraph>{player.item.alias}</Paragraph>
-          </Card.Content>
-          <Card.Cover source={player.item.image} />
-          <Card.Actions>
-            <Button
-              style={{
-                flex: 0,
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '50%'
-              }}
-            >
-              <Text style={{ textAlign: 'center' }}>Editar</Text>
-            </Button>
-            <Button style={{ flex: 1 }} onPress={() => onDelete(player)}>
-              <Image style={styles.icon} source={deleteImage}></Image>
-            </Button>
-          </Card.Actions>
-        </Card>
-      </View>
-    );
-  };
+	const renderPlayer = player => {
+		return (
+			<View style={playersList.listItem}>
+				<Card style={playersList.card}>
+					<Card.Cover source={player.item.image}></Card.Cover>
+					<Card.Content>
+						<Title style={playersList.title}>{player.item.name}</Title>
+						<Paragraph style={playersList.paragraph}>
+							{player.item.alias}
+							{breakLine}
+							{player.item.position}
+							{breakLine}
+							{player.item.club}
+						</Paragraph>
+					</Card.Content>
+					<Card.Actions style={playersList.containerButtons}>
+						<Button style={playersList.icon}>
+							<Icon
+								name="pencil"
+								type="font-awesome"
+								color="#16a0e2"
+								size={18}
+							></Icon>
+						</Button>
+						<Button style={playersList.icon} onPress={() => onDelete(player)}>
+							<Icon
+								name="trash"
+								type="font-awesome"
+								color="#16a0e2"
+								size={18}
+							></Icon>
+						</Button>
+					</Card.Actions>
+				</Card>
+			</View>
+		);
+	};
 
-  return (
-    <FlatList
-      data={players}
-      renderItem={player => renderPlayer(player)}
-      keyExtractor={player => player.id}
-      style={styles.container}
-      contentContainerStyle={{ justifyContent: 'center' }}
-    ></FlatList>
-  );
+	return (
+		<FlatList
+			data={players}
+			renderItem={player => renderPlayer(player)}
+			keyExtractor={player => player.id}
+			style={playersList.container}
+			contentContainerStyle={{ justifyContent: 'center' }}
+		></FlatList>
+	);
 };
 
 export default PlayersList;
