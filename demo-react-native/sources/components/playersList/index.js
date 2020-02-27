@@ -22,7 +22,7 @@ const PlayersList = ({ players, onDelete }) => {
 						</Paragraph>
 					</Card.Content>
 					<Card.Actions style={playersList.containerButtons}>
-						<Button style={playersList.icon}>
+						<Button style={playersList.icon} onPress={() => onUpdate(player)}>
 							<Icon
 								name="pencil"
 								type="font-awesome"

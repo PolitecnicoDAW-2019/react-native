@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Alert } from 'react-native';
-import { Appbar } from 'react-native-paper';
+import { Appbar, FAB } from 'react-native-paper';
 import PlayersList from '../../components/playersList/index';
 import { main } from '../../styles';
 import {
@@ -72,20 +72,12 @@ class MainScreen extends Component {
 				<View style={main.containerPlayers}>
 					<PlayersList
 						players={players}
+						onUpdate={this.handleUpdate}
 						onDelete={this.handleDelete}
 					></PlayersList>
 				</View>
 
-				<Appbar style={main.footer}>
-					<Appbar.Action
-						icon="twitter"
-						onPress={() => console.log('Pressed archive')}
-					></Appbar.Action>
-					<Appbar.Action
-						icon="email"
-						onPress={() => console.log('Pressed archive')}
-					></Appbar.Action>
-				</Appbar>
+				<FAB style={main.fab} small icon="plus" onPress={this.handleAdd}></FAB>
 			</View>
 		);
 	}

@@ -20,7 +20,8 @@ const playersList = StyleSheet.create({
 		height: 20
 	},
 	card: {
-		width: '70%'
+		width: '70%',
+		elevation: 5
 	},
 	information: {
 		width: '100%',
@@ -84,6 +85,14 @@ const main = StyleSheet.create({
 		width: '100%',
 		height: '40px',
 		backgroundColor: '#16a0e2'
+	},
+	fab: {
+		position: 'fixed',
+		margin: 25,
+		right: 0,
+		bottom: 0,
+		backgroundColor: '#16a0e2',
+		elevation: 8
 	}
 });
 
