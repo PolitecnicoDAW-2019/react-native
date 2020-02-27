@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import MainScreen from './sources/screens/main';
+import React from 'react';
+import AppNavigator from './sources/navigation/AppNavigator';
 
-export default class App extends Component {
+export default class App extends React.Component {
 	render() {
-		return <MainScreen></MainScreen>;
+		return <AppNavigator></AppNavigator>;
 	}
 }

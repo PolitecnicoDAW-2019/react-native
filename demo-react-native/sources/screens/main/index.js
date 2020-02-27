@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Alert } from 'react-native';
-import { Appbar, FAB } from 'react-native-paper';
+import { FAB } from 'react-native-paper';
 import PlayersList from '../../components/playersList/index';
 import { main } from '../../styles';
 import {
@@ -11,6 +11,10 @@ import {
 } from '../../data/players';
 
 class MainScreen extends Component {
+	static navigationOptions = {
+		title: 'Football Native'
+	};
+
 	constructor(props) {
 		super(props);
 
@@ -50,34 +54,42 @@ class MainScreen extends Component {
 		]);
 	};
 
+	/* TODO: */
 	handleSearch = () => {
 		console.log('Buscando');
+	};
+
+	openEditPlayer = player => {
+		this.props.navigation.navigate('Edit', {
+			player,
+			onSave: this.handleUpdate
+		});
+	};
+
+	openAddPlayer = () => {
+		this.props.navigation.navigate('Edit', {
+			onSave: this.handleAdd
+		});
 	};
 
 	render() {
 		const { players } = this.state;
 		return (
 			<View style={main.containerMain}>
-				<Appbar.Header style={main.appbar}>
-					<Appbar.Content
-						title="React Native"
-						subtitle="demo daw"
-					></Appbar.Content>
-					<Appbar.Action
-						icon="magnify"
-						onPress={this.handleSearch}
-					></Appbar.Action>
-				</Appbar.Header>
+				<PlayersList
+					players={players}
+					onUpdate={this.handleUpdate}
+					onDelete={this.handleDelete}
+					onEdit={this.openEditPlayer}
+				></PlayersList>
 
-				<View style={main.containerPlayers}>
-					<PlayersList
-						players={players}
-						onUpdate={this.handleUpdate}
-						onDelete={this.handleDelete}
-					></PlayersList>
-				</View>
-
-				<FAB style={main.fab} small icon="plus" onPress={this.handleAdd}></FAB>
+				<FAB
+					style={main.fabSearch}
+					small
+					icon="magnify"
+					onPress={this.handleSearch}
+				></FAB>
+				<FAB style={main.fabAdd} icon="plus" onPress={this.openAddPlayer}></FAB>
 			</View>
 		);
 	}
