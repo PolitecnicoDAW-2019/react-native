@@ -8,7 +8,6 @@ const playersList = StyleSheet.create({
 	listItem: {
 		width: '100%',
 		flexDirection: 'row',
-		alignItems: 'center',
 		justifyContent: 'center',
 		marginBottom: 30
 	},
@@ -20,20 +19,16 @@ const playersList = StyleSheet.create({
 		height: 20
 	},
 	card: {
-		width: '70%'
+		width: '70%',
+		elevation: 6
 	},
 	information: {
 		width: '100%',
-		fontSize: '12px'
-	},
-	title: {
-		color: '#000',
-		fontWeight: 'bold',
-		fontSize: '18px'
+		fontSize: 12
 	},
 	paragraph: {
 		color: '#a6a6a6',
-		fontSize: '14px',
+		fontSize: 14,
 		textTransform: 'capitalize',
 		marginBottom: 15
 	},
@@ -47,13 +42,7 @@ const playersList = StyleSheet.create({
 
 const main = StyleSheet.create({
 	containerMain: {
-		backgroundColor: '#ffffff',
-		margin: 0
-	},
-	containerPlayers: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
+		backgroundColor: '#f9f9fa',
 		margin: 0
 	},
 	addRow: {
@@ -72,19 +61,33 @@ const main = StyleSheet.create({
 	loading: {
 		flex: 1
 	},
-	appbar: {
-		width: '100%',
-		backgroundColor: '#16a0e2'
+	fabAdd: {
+		position: 'absolute',
+		margin: 25,
+		right: 0,
+		bottom: 0,
+		backgroundColor: '#4962f6',
+		elevation: 8
 	},
-	footer: {
-		flex: 1,
-		flexDirection: 'row',
-		justifyContent: 'flex-start',
-		alignItems: 'center',
-		width: '100%',
-		height: '40px',
-		backgroundColor: '#16a0e2'
+	fabSearch: {
+		position: 'absolute',
+		marginRight: 25,
+		marginBottom: 90,
+		right: 0,
+		bottom: 0,
+		backgroundColor: '#6077f7',
+		elevation: 6
 	}
 });
 
-export { playersList, main };
+const editPlayer = StyleSheet.create({
+	icon: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		width: 20,
+		height: 20
+	}
+});
+
+export { playersList, main, editPlayer };

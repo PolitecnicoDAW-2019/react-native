@@ -28,6 +28,15 @@ const getPlayers = () => {
 			birthday: '1999-12-12',
 			history: 'testTeam',
 			club: 'testTeam'
+		}),
+		new Player({
+			name: 'Eden Hazard',
+			alias: 'HAZARD',
+			position: 'delantero',
+			image: require('../../../assets/images/hazard.jpg'),
+			birthday: '1999-12-12',
+			history: 'testTeam',
+			club: 'testTeam'
 		})
 	];
 };
