@@ -12,15 +12,17 @@ export default class EditPlayer extends Component {
 	static navigationOptions = ({ navigation }) => ({
 		title: 'Editar o Añadir Jugador',
 		headerRight: (
-			<Button
+			<Icon
 				style={editPlayer.icon}
 				onPress={() => {
 					navigation.getParam('onSave')(navigation.getParam('updatedPlayer'));
 					navigation.goBack();
 				}}
-			>
-				<Icon name="save" type="font-awesome" color="#ffffff" size={20}></Icon>
-			</Button>
+				name="save"
+				type="font-awesome"
+				color="#ffffff"
+				size={20}
+			></Icon>
 		)
 	});
 

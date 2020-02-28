@@ -24,11 +24,11 @@ const playersList = StyleSheet.create({
 	},
 	information: {
 		width: '100%',
-		fontSize: '12px'
+		fontSize: 12
 	},
 	paragraph: {
 		color: '#a6a6a6',
-		fontSize: '14px',
+		fontSize: 14,
 		textTransform: 'capitalize',
 		marginBottom: 15
 	},
@@ -62,7 +62,7 @@ const main = StyleSheet.create({
 		flex: 1
 	},
 	fabAdd: {
-		position: 'fixed',
+		position: 'absolute',
 		margin: 25,
 		right: 0,
 		bottom: 0,
@@ -70,7 +70,7 @@ const main = StyleSheet.create({
 		elevation: 8
 	},
 	fabSearch: {
-		position: 'fixed',
+		position: 'absolute',
 		marginRight: 25,
 		marginBottom: 90,
 		right: 0,

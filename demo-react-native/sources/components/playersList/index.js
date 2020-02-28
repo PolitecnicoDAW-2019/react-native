@@ -22,22 +22,22 @@ const PlayersList = ({ players, onDelete, onUpdate, onEdit }) => {
 						</Paragraph>
 					</Card.Content>
 					<Card.Actions style={playersList.containerButtons}>
-						<Button style={playersList.icon} onPress={() => onEdit(player)}>
-							<Icon
-								name="pencil"
-								type="font-awesome"
-								color="#4962f6"
-								size={18}
-							></Icon>
-						</Button>
-						<Button style={playersList.icon} onPress={() => onDelete(player)}>
-							<Icon
-								name="trash"
-								type="font-awesome"
-								color="#4962f6"
-								size={18}
-							></Icon>
-						</Button>
+						<Icon
+							style={playersList.icon}
+							onPress={() => onEdit(player)}
+							name="pencil"
+							type="font-awesome"
+							color="#4962f6"
+							size={18}
+						></Icon>
+						<Icon
+							style={playersList.icon}
+							onPress={() => onDelete(player)}
+							name="trash"
+							type="font-awesome"
+							color="#4962f6"
+							size={18}
+						></Icon>
 					</Card.Actions>
 				</Card>
 			</View>
