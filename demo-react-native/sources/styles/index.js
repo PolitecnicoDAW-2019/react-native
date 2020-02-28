@@ -71,12 +71,11 @@ const main = StyleSheet.create({
 	},
 	fabSearch: {
 		position: 'absolute',
-		marginRight: 25,
-		marginBottom: 90,
+		margin: 25,
 		right: 0,
-		bottom: 0,
-		backgroundColor: '#6077f7',
-		elevation: 6
+		bottom: 80,
+		backgroundColor: '#4962f6',
+		elevation: 8
 	}
 });
 

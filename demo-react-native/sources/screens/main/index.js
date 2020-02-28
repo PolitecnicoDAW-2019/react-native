@@ -85,7 +85,6 @@ class MainScreen extends Component {
 
 				<FAB
 					style={main.fabSearch}
-					small
 					icon="magnify"
 					onPress={this.handleSearch}
 				></FAB>
