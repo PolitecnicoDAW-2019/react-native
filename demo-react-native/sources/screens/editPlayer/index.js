@@ -5,12 +5,10 @@ import { Icon } from 'react-native-elements';
 import { editPlayer } from '../../styles';
 import BasicAddItems from '../../components/basicAddItems';
 
-//? QUE COJA BIEN LOS DATOS Y ACTUALICE BIEN
-// nose si es por que en web no lo hace
-
 export default class EditPlayer extends Component {
 	static navigationOptions = ({ navigation }) => ({
 		title: 'Editar o Añadir Jugador',
+		//TODO: headerRight deprecated, change a bottom button
 		headerRight: (
 			<Icon
 				style={editPlayer.icon}

@@ -3,9 +3,6 @@
 	"version": "0.0.1",
 	"description": "React Native",
 	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/PolitecnicoDAW/react-native.git"
@@ -15,7 +12,10 @@
 		"REACT-NATIVE",
 		"JAVASCRIPT"
 	],
-	"author": "Alejandro Torres, Carlos Llerandi",
+	"author": [
+		"Alejandro Torres",
+		"Carlos Llerandi"
+	],
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/PolitecnicoDAW/react-native/issues"
