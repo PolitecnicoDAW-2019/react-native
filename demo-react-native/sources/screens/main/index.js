@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Alert } from 'react-native';
 import { FAB } from 'react-native-paper';
 import PlayersList from '../../components/playersList/index';
+import SearchPlayer from '../../components/searchPlayerModal/index';
 import { main } from '../../styles';
 import {
 	getPlayers,
@@ -19,7 +20,9 @@ class MainScreen extends Component {
 		super(props);
 
 		this.state = {
-			players: []
+			players: [],
+			modalVisible: false,
+			closeSearchButton: false
 		};
 	}
 
@@ -28,15 +31,13 @@ class MainScreen extends Component {
 		this.setState({ players: players });
 	};
 
-	handleAdd = () => {
-		const { players } = this.state;
-		const newList = addPlayer(players);
+	handleAdd = player => {
+		const newList = addPlayer(player);
 		this.setState({ players: newList });
 	};
 
 	handleUpdate = player => {
-		const { players } = this.state;
-		const newList = updatePlayer(players, player);
+		const newList = updatePlayer(player);
 		this.setState({ players: newList });
 	};
 
@@ -46,17 +47,28 @@ class MainScreen extends Component {
 			{
 				text: 'OK',
 				onPress: () => {
-					const { players } = this.state;
-					const newList = deletePlayer(players, player);
-					this.setState({ players: newList });
+					const newList = deletePlayer(player);
+					this.setState({ players: newList, closeSearchButton: false });
 				}
 			}
 		]);
 	};
 
-	/* TODO: */
-	handleSearch = () => {
-		console.log('Buscando');
+	handleHideModal = visible => {
+		this.setState({ modalVisible: visible });
+	};
+
+	handleSearch = playerName => {
+		const { players } = this.state;
+		const newList = players.filter(
+			({ name }) => name.toLowerCase() === playerName.toLowerCase()
+		);
+		if (newList.length < 1) {
+			alert('No results found');
+			this.setState({ players: getPlayers() });
+		} else {
+			this.setState({ players: newList, closeSearchButton: true });
+		}
 	};
 
 	openEditPlayer = player => {
@@ -72,8 +84,14 @@ class MainScreen extends Component {
 		});
 	};
 
+	clearSearch = () => {
+		this.setState({ players: getPlayers(), closeSearchButton: false });
+	};
+
 	render() {
 		const { players } = this.state;
+		const { modalVisible } = this.state;
+		const { closeSearchButton } = this.state;
 		return (
 			<View style={main.containerMain}>
 				<PlayersList
@@ -82,13 +100,25 @@ class MainScreen extends Component {
 					onDelete={this.handleDelete}
 					onEdit={this.openEditPlayer}
 				></PlayersList>
-
+				{closeSearchButton && (
+					<FAB
+						style={main.closeSearch}
+						icon="window-close"
+						onPress={this.clearSearch}
+						small
+					></FAB>
+				)}
 				<FAB
 					style={main.fabSearch}
 					icon="magnify"
-					onPress={this.handleSearch}
+					onPress={() => this.handleHideModal(true)}
 				></FAB>
 				<FAB style={main.fabAdd} icon="plus" onPress={this.openAddPlayer}></FAB>
+				<SearchPlayer
+					modalVisible={modalVisible}
+					handleCloseModal={this.handleHideModal}
+					handleSearch={this.handleSearch}
+				></SearchPlayer>
 			</View>
 		);
 	}
