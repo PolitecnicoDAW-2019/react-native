@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { View, Alert } from 'react-native';
 import { FAB } from 'react-native-paper';
-import PlayersList from '../../components/playersList/index';
-import SearchPlayer from '../../components/searchPlayerModal/index';
+import PlayersList from '../../components/playersList';
+import SearchPlayer from '../../components/searchPlayerModal';
 import { main } from '../../styles';
 import {
 	getPlayers,
 	addPlayer,
 	deletePlayer,
 	updatePlayer
-} from '../../data/players';
+} from '../../data/players.data';
+import { mainTitle, dataNotFound, askPlayerDelete } from '../../constants';
 
 class MainScreen extends Component {
 	static navigationOptions = {
-		title: 'Football Native'
+		title: mainTitle
 	};
 
 	constructor(props) {
@@ -26,7 +27,7 @@ class MainScreen extends Component {
 		};
 	}
 
-	componentDidMount = () => {
+	componentDidMount = async () => {
 		const players = getPlayers();
 		this.setState({ players: players });
 	};
@@ -42,7 +43,7 @@ class MainScreen extends Component {
 	};
 
 	handleDelete = player => {
-		Alert.alert('¿Quieres eliminar al jugador?', player.text, [
+		Alert.alert(askPlayerDelete, player.text, [
 			{ text: 'Cancelar', style: 'cancel' },
 			{
 				text: 'OK',
@@ -64,7 +65,7 @@ class MainScreen extends Component {
 			({ name }) => name.toLowerCase() === playerName.toLowerCase()
 		);
 		if (newList.length < 1) {
-			alert('No results found');
+			alert(dataNotFound);
 			this.setState({ players: getPlayers() });
 		} else {
 			this.setState({ players: newList, closeSearchButton: true });
@@ -79,7 +80,7 @@ class MainScreen extends Component {
 	};
 
 	openAddPlayer = () => {
-		this.props.navigation.navigate('Edit', {
+		this.props.navigation.navigate('Add', {
 			onSave: this.handleAdd
 		});
 	};
@@ -96,7 +97,6 @@ class MainScreen extends Component {
 			<View style={main.containerMain}>
 				<PlayersList
 					players={players}
-					onUpdate={this.handleUpdate}
 					onDelete={this.handleDelete}
 					onEdit={this.openEditPlayer}
 				></PlayersList>

@@ -2,9 +2,32 @@
   <img src="favicon.png" alt="React Logo" width="150" height="100">
 </p>
 
-<h1 align="center">React Native</h1>
+<h1 align="center">
+  <a href="https://reactnative.dev/">
+    React Native
+  </a>
+</h1>
 
-## Quick start
+<p align="center">
+  <strong>Learn once, write anywhere:</strong><br>
+  Build mobile apps with React.
+</p>
+
+<p align="center">
+  <a href="https://github.com/facebook/react-native/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native is released under the MIT license." />
+      <a href="https://www.npmjs.org/package/react-native">
+    <img src="https://badge.fury.io/js/react-native.svg" alt="Current npm package version." />
+  </a>
+</p>
+
+## Contents
+
+- [Requirements](#-requirements)
+- [Creators](#-creators)
+- [License](#-license)
+
+## 📋 Requirements
 
 Warning sudo permits :warning:
 
@@ -14,7 +37,7 @@ Warning sudo permits :warning:
 - Start the project -> `npm run start` or `expo start` : application execution
 - Download the [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent) application on Android or iOS : expo application
 
-## Creator
+## 👏 Creators
 
 ### Alejandro Torres
 
@@ -25,6 +48,6 @@ Warning sudo permits :warning:
 
 - <https://github.com/cllendi/>
 
-## Copyright and license
+## 📄 License
 
 Code and documentation copyright 2020 the [Ceres Author - Aresigner](https://github.com/aresigner/) and [Ceres Author - CLlendi](https://github.com/cllendi/). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).

@@ -1,59 +1,47 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Button } from 'react-native-paper';
-import { editPlayer } from '../../styles';
+import { addPlayer } from '../../styles';
 import BasicAddItems from '../../components/modifyPlayersData';
-import { editPlayerTitle } from '../../constants';
+import { addPlayerTitle } from '../../constants';
 
-export default class EditPlayer extends Component {
+export default class AddPlayer extends Component {
 	static navigationOptions = {
-		title: editPlayerTitle
+		title: addPlayerTitle
 	};
 
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			player: props.navigation.getParam('player')
-		};
+		this.state = '';
 	}
 
 	componentDidMount = async () => {
 		this.props.navigation.setParams({
-			updatedPlayer: this.state.player
+			addPlayer: this.state.player
 		});
 	};
 
-	updateLocalPlayer = property => {
+	addLocalPlayer = property => {
 		const newPlayer = { ...this.state.player, ...property };
 		this.setState({ player: newPlayer });
 		this.props.navigation.setParams({
-			updatedPlayer: newPlayer
+			addPlayer: newPlayer
 		});
 	};
 
 	render() {
-		const { player } = this.state;
-		const { name, alias, position, birthdate, history, club } = player;
 		return (
-			<View style={editPlayer.container}>
+			<View style={addPlayer.container}>
 				<BasicAddItems
-					name={name}
-					alias={alias}
-					position={position}
-					birthdate={birthdate}
-					history={history}
-					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
 				></BasicAddItems>
-				<View style={editPlayer.bottomView}>
+				<View style={addPlayer.bottomView}>
 					<Button
 						mode="contained"
-						style={editPlayer.saveButton}
+						style={addPlayer.saveButton}
 						onPress={() => {
-							navigation.getParam('onSave')(
-								navigation.getParam('updatedPlayer')
-							);
+							navigation.getParam('onSave')(navigation.getParam('addPlayer'));
 							navigation.goBack();
 						}}
 					>
