@@ -43,7 +43,8 @@ const playersList = StyleSheet.create({
 const main = StyleSheet.create({
 	containerMain: {
 		backgroundColor: '#f9f9fa',
-		margin: 0
+		margin: 0,
+		height: '100%'
 	},
 	addRow: {
 		flexDirection: 'row',
@@ -71,12 +72,20 @@ const main = StyleSheet.create({
 	},
 	fabSearch: {
 		position: 'absolute',
-		marginRight: 25,
-		marginBottom: 90,
+		margin: 25,
 		right: 0,
-		bottom: 0,
-		backgroundColor: '#6077f7',
-		elevation: 6
+		bottom: 80,
+		backgroundColor: '#4962f6',
+		elevation: 8
+	},
+	closeSearch: {
+		position: 'absolute',
+		margin: 25,
+		right: 0,
+		top: 0,
+		backgroundColor: '#0E122D',
+		opacity: 0.7,
+		elevation: 8
 	}
 });
 
