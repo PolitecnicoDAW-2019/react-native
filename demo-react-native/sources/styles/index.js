@@ -3,13 +3,15 @@ import { StyleSheet } from 'react-native';
 const playersList = StyleSheet.create({
 	container: {
 		width: '100%',
-		marginTop: 40
+		paddingTop: 40,
+		paddingBottom: 40
 	},
 	listItem: {
-		width: '100%',
-		flexDirection: 'row',
-		justifyContent: 'center',
-		marginBottom: 30
+		flex: 1,
+		flexDirection: 'column',
+		alignItems: 'center',
+		width: '100%'
+		/* marginBottom: 30 */
 	},
 	icon: {
 		flex: 1,
@@ -20,7 +22,9 @@ const playersList = StyleSheet.create({
 	},
 	card: {
 		width: '70%',
-		elevation: 6
+		marginBottom: 60,
+		elevation: 6,
+		backgroundColor: '#ffffff'
 	},
 	information: {
 		width: '100%',
@@ -64,14 +68,14 @@ const main = StyleSheet.create({
 	},
 	fabAdd: {
 		position: 'absolute',
-		right: 20,
+		right: 30,
 		bottom: 20,
 		backgroundColor: '#4962f6',
 		elevation: 8
 	},
 	fabSearch: {
 		position: 'absolute',
-		right: 20,
+		right: 30,
 		bottom: 90,
 		backgroundColor: '#4962f6',
 		elevation: 8
@@ -149,16 +153,12 @@ const searchPlayer = StyleSheet.create({
 		flexDirection: 'row'
 	},
 	content: {
+		flex: 1,
+		width: '100%',
 		padding: 20,
 		paddingBottom: 30,
-		flex: 1,
 		backgroundColor: '#ffffff',
-		shadowOffset: { width: 0, height: -3 },
-		shadowColor: 'black',
-		shadowOpacity: 0.2,
-		shadowRadius: 5,
 		elevation: 30
-		// width: 200
 	},
 	text: {
 		flex: 5,
