@@ -20,9 +20,9 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 							{breakLine}
 							{player.item.club}
 							{breakLine}
-							{player.birthdate}
+							{player.item.birthdate}
 							{breakLine}
-							{player.history}
+							{player.item.history}
 						</Paragraph>
 					</Card.Content>
 					<Card.Actions style={playersList.containerButtons}>
