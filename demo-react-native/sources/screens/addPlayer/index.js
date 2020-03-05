@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { addPlayer } from '../../styles';
-import BasicAddItems from '../../components/modifyPlayersData';
+import ModifyPlayersData from '../../components/modifyPlayersData';
 
 export default class AddPlayer extends Component {
 	constructor({ route, navigation }) {
@@ -24,9 +24,9 @@ export default class AddPlayer extends Component {
 		const { handleAdd } = this.state;
 		return (
 			<View style={addPlayer.container}>
-				<BasicAddItems
+				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
-				></BasicAddItems>
+				></ModifyPlayersData>
 				<View style={addPlayer.bottomView}>
 					<Button
 						mode="contained"

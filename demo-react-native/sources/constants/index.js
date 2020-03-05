@@ -1,19 +1,19 @@
 const BREAKLINE = '\n';
-const CLOSEMODAL = 'El modal ha sido cerrado';
-const DATANOTFOUND = 'No resultados encontrados';
-const ASKPLAYERDELETE = '¿Quieres eliminar al jugador?';
-const MAINTITLE = 'Fútbol Nativo';
-const EDITTITLE = 'Editar jugador';
-const ADDTITLE = 'Añadir jugador';
-const COLORPRIMARY = '#4962f6';
+const CLOSE_MODAL = 'El modal ha sido cerrado';
+const DATA_NOT_FOUND = 'No resultados encontrados';
+const ASK_PLAYER_DELETE = '¿Quieres eliminar al jugador?';
+const MAIN_TITLE = 'Fútbol Nativo';
+const EDIT_TITLE = 'Editar jugador';
+const ADD_TITLE = 'Añadir jugador';
+const COLOR_PRIMARY = '#4962f6';
 
 export {
 	BREAKLINE,
-	CLOSEMODAL,
-	DATANOTFOUND,
-	ASKPLAYERDELETE,
-	MAINTITLE,
-	EDITTITLE,
-	ADDTITLE,
-	COLORPRIMARY
+	CLOSE_MODAL,
+	DATA_NOT_FOUND,
+	ASK_PLAYER_DELETE,
+	MAIN_TITLE,
+	EDIT_TITLE,
+	ADD_TITLE,
+	COLOR_PRIMARY
 };
