@@ -79,7 +79,6 @@ class MainScreen extends Component {
 			player,
 			handleUpdate: this.handleUpdate
 		});
-
 	};
 
 	openAddPlayer = () => {

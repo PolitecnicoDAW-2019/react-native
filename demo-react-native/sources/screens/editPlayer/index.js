@@ -18,12 +18,6 @@ export default class EditPlayer extends Component {
 		};
 	}
 
-	componentDidMount = async () => {
-		this.props.route.params.player.item({
-			updatedPlayer: this.state.player
-		});
-	};
-
 	updateLocalPlayer = property => {
 		const newPlayer = { ...this.state.player, ...property };
 		this.setState({ player: newPlayer });
