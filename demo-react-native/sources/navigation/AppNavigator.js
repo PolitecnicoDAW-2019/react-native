@@ -1,28 +1,27 @@
-import React from 'react';
+import * as React from 'react';
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
 import MainScreen from '../screens/main';
 import EditPlayer from '../screens/editPlayer';
-import AddPlayer from '../screens/addPlayer';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default createAppContainer(
-	createStackNavigator(
-		{
-			Main: { screen: MainScreen },
-			Edit: { screen: EditPlayer },
-			Add: { screen: AddPlayer }
-		},
-		{
-			initialRouteName: 'Main',
-			defaultNavigationOptions: {
-				headerStyle: {
-					backgroundColor: '#4962f6'
-				},
-				headerTintColor: '#ffffff',
-				headerTitleStyle: {
-					fontWeight: 'bold'
-				}
-			}
-		}
-	)
-);
+const Stack = createStackNavigator();
+
+export default function AppNavigator() {
+	return (
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName="MainScreen">
+				<Stack.Screen
+					name="MainScreen"
+					component={MainScreen}
+					options={{ title: 'Football App' }}
+				/>
+				<Stack.Screen
+					name="EditPlayer"
+					component={EditPlayer}
+					options={{ title: 'Edit player' }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
+}

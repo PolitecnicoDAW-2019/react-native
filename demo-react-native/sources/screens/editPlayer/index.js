@@ -10,11 +10,16 @@ export default class EditPlayer extends Component {
 		title: editPlayerTitle
 	};
 
-	constructor(props) {
-		super(props);
+	constructor({ route, navigation }) {
+		super({ route, navigation });
+
+		const { player, handleUpdate } = route.params;
+
+		this.navigation = navigation;
 
 		this.state = {
-			player: props.navigation.getParam('player')
+			player: player.item,
+			handleUpdate: handleUpdate
 		};
 	}
 
@@ -33,7 +38,7 @@ export default class EditPlayer extends Component {
 	};
 
 	render() {
-		const { player } = this.state;
+		const { player, handleUpdate } = this.state;
 		const { name, alias, position, birthdate, history, club } = player;
 		return (
 			<View style={editPlayer.container}>
@@ -51,10 +56,9 @@ export default class EditPlayer extends Component {
 						mode="contained"
 						style={editPlayer.saveButton}
 						onPress={() => {
-							navigation.getParam('onSave')(
-								navigation.getParam('updatedPlayer')
-							);
-							navigation.goBack();
+							const newPlayer = this.state.player;
+							handleUpdate(newPlayer);
+							this.navigation.goBack();
 						}}
 					>
 						Guardar

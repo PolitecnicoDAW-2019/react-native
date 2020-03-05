@@ -20,6 +20,8 @@ class MainScreen extends Component {
 	constructor(props) {
 		super(props);
 
+		this.navigation = props.navigation;
+
 		this.state = {
 			players: [],
 			modalVisible: false,
@@ -73,9 +75,9 @@ class MainScreen extends Component {
 	};
 
 	openEditPlayer = player => {
-		this.props.navigation.navigate('Edit', {
+		this.navigation.navigate('EditPlayer', {
 			player,
-			onSave: this.handleUpdate
+			handleUpdate: this.handleUpdate
 		});
 	};
 
