@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { editPlayer } from '../../styles';
 import BasicAddItems from '../../components/modifyPlayersData';
-import { editPlayerTitle } from '../../constants';
 
 export default class EditPlayer extends Component {
 	static navigationOptions = {
@@ -20,11 +19,12 @@ export default class EditPlayer extends Component {
 		this.state = {
 			player: player.item,
 			handleUpdate: handleUpdate
+
 		};
 	}
 
 	componentDidMount = async () => {
-		this.props.navigation.setParams({
+		this.props.route.params.player.item({
 			updatedPlayer: this.state.player
 		});
 	};
@@ -32,10 +32,10 @@ export default class EditPlayer extends Component {
 	updateLocalPlayer = property => {
 		const newPlayer = { ...this.state.player, ...property };
 		this.setState({ player: newPlayer });
-		this.props.navigation.setParams({
+		this.props.route.params.player.item.setParams({
 			updatedPlayer: newPlayer
 		});
-	};
+	}; 
 
 	render() {
 		const { player, handleUpdate } = this.state;

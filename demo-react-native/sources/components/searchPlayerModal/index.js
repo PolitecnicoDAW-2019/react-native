@@ -7,9 +7,9 @@ import {
 	Button
 } from 'react-native';
 import { searchPlayer } from '../../styles';
-import { closeModal } from '../../constants';
+import { CLOSEMODAL, COLORPRIMARY } from '../../constants';
 
-const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
+const SearchPlayer = ({ modalVisible, handleCLOSEMODAL, handleSearch }) => {
 	const [value, onChangeText] = React.useState('');
 	return (
 		<Modal
@@ -17,7 +17,7 @@ const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
 			transparent={true}
 			visible={modalVisible}
 			onRequestClose={() => {
-				Alert.alert(closeModal);
+				Alert.alert(CLOSEMODAL);
 			}}
 		>
 			<View style={searchPlayer.container}>
@@ -36,9 +36,9 @@ const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
 								title="Buscar"
 								onPress={() => {
 									handleSearch(value);
-									handleCloseModal(false);
+									handleCLOSEMODAL(false);
 								}}
-								color="#4962f6"
+								color={COLORPRIMARY}
 							/>
 						</View>
 					</View>

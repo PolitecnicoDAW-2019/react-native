@@ -10,7 +10,7 @@ import {
 	deletePlayer,
 	updatePlayer
 } from '../../data/players.data';
-import { mainTitle, dataNotFound, askPlayerDelete } from '../../constants';
+import { mainTitle, DATANOTFOUND, ASKPLAYERDELETE } from '../../constants';
 
 class MainScreen extends Component {
 	static navigationOptions = {
@@ -45,7 +45,7 @@ class MainScreen extends Component {
 	};
 
 	handleDelete = player => {
-		Alert.alert(askPlayerDelete, player.text, [
+		Alert.alert(ASKPLAYERDELETE, player.text, [
 			{ text: 'Cancelar', style: 'cancel' },
 			{
 				text: 'OK',
@@ -67,7 +67,7 @@ class MainScreen extends Component {
 			({ name }) => name.toLowerCase() === playerName.toLowerCase()
 		);
 		if (newList.length < 1) {
-			alert(dataNotFound);
+			alert(DATANOTFOUND);
 			this.setState({ players: getPlayers() });
 		} else {
 			this.setState({ players: newList, closeSearchButton: true });
@@ -79,12 +79,11 @@ class MainScreen extends Component {
 			player,
 			handleUpdate: this.handleUpdate
 		});
+
 	};
 
 	openAddPlayer = () => {
-		this.props.navigation.navigate('Add', {
-			onSave: this.handleAdd
-		});
+		this.navigation.navigate('Add', { player, onSave: this.handleAdd });
 	};
 
 	clearSearch = () => {
@@ -118,7 +117,7 @@ class MainScreen extends Component {
 				<FAB style={main.fabAdd} icon="plus" onPress={this.openAddPlayer}></FAB>
 				<SearchPlayer
 					modalVisible={modalVisible}
-					handleCloseModal={this.handleHideModal}
+					handleCLOSEMODAL={this.handleHideModal}
 					handleSearch={this.handleSearch}
 				></SearchPlayer>
 			</View>

@@ -20,6 +20,7 @@ export default function AppNavigator() {
 					name="EditPlayer"
 					component={EditPlayer}
 					options={{ title: 'Edit player' }}
+
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
