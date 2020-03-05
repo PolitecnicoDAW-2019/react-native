@@ -60,7 +60,7 @@ const updatePlayer = selectedPlayer => {
 };
 
 const addPlayer = selectedPlayer => {
-	players = [...(players || []), newPlayer(selectedPlayer)];
+	players = [...(players || []), new Player(selectedPlayer)];
 	return players;
 };
 
