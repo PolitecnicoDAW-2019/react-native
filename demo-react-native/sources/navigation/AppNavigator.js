@@ -1,35 +1,28 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { createAppContainer } from 'react-navigation';
 import MainScreen from '../screens/main';
 import EditPlayer from '../screens/editPlayer';
-import AddPlayer from '../screens/addPlayer';
-import { MAINTITLE, EDITTITLE, ADDTITLE } from '../constants';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-function AppNavigator() {
+export default function AppNavigator() {
 	return (
-		<NavigationContainer initialRouteName="MainScreen">
-			<Stack.Navigator>
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName="MainScreen">
 				<Stack.Screen
-					name="Main"
+					name="MainScreen"
 					component={MainScreen}
-					options={{ title: MAINTITLE }}
+					options={{ title: 'Football App' }}
 				/>
 				<Stack.Screen
-					name="Edit"
+					name="EditPlayer"
 					component={EditPlayer}
-					options={{ title: EDITTITLE }}
-				/>
-				<Stack.Screen
-					name="Add"
-					component={AddPlayer}
-					options={{ title: ADDTITLE }}
+					options={{ title: 'Edit player' }}
+
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
 }
-
-export default AppNavigator;

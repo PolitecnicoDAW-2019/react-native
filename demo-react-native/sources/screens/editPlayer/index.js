@@ -5,15 +5,25 @@ import { editPlayer } from '../../styles';
 import BasicAddItems from '../../components/modifyPlayersData';
 
 export default class EditPlayer extends Component {
-	constructor(props) {
-		super(props);
+	static navigationOptions = {
+		title: editPlayerTitle
+	};
+
+	constructor({ route, navigation }) {
+		super({ route, navigation });
+
+		const { player, handleUpdate } = route.params;
+
+		this.navigation = navigation;
 
 		this.state = {
-			player: props.route.params.player.item
+			player: player.item,
+			handleUpdate: handleUpdate
+
 		};
 	}
 
-	/* componentDidMount = async () => {
+	componentDidMount = async () => {
 		this.props.route.params.player.item({
 			updatedPlayer: this.state.player
 		});
@@ -25,10 +35,10 @@ export default class EditPlayer extends Component {
 		this.props.route.params.player.item.setParams({
 			updatedPlayer: newPlayer
 		});
-	}; */
+	}; 
 
 	render() {
-		const { player } = this.state;
+		const { player, handleUpdate } = this.state;
 		const { name, alias, position, birthdate, history, club } = player;
 		return (
 			<View style={editPlayer.container}>
@@ -46,10 +56,9 @@ export default class EditPlayer extends Component {
 						mode="contained"
 						style={editPlayer.saveButton}
 						onPress={() => {
-							navigation.getParam('onSave')(
-								navigation.getParam('updatedPlayer')
-							);
-							navigation.goBack();
+							const newPlayer = this.state.player;
+							handleUpdate(newPlayer);
+							this.navigation.goBack();
 						}}
 					>
 						Guardar

@@ -43,7 +43,7 @@ const getPlayers = () => players;
 
 const updatePlayer = selectedPlayer => {
 	const updateIndex = players.findIndex(
-		player => player.item.id === selectedPlayer.item.id
+		player => player.id === selectedPlayer.id
 	);
 	players = [...players];
 	players[updateIndex] = selectedPlayer;
