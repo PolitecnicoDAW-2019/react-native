@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <a href="https://reactnative.dev/">
-    React Native
+    Football Native
   </a>
 </h1>
 
@@ -16,8 +16,9 @@
 <p align="center">
   <a href="https://github.com/facebook/react-native/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native is released under the MIT license." />
-      <a href="https://www.npmjs.org/package/react-native">
-    <img src="https://badge.fury.io/js/react-native.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://www.npmjs.org/package/react-native">
+    <img src="https://img.shields.io/badge/npm%20version-6.13.7-success.svg" alt="Current npm package version." />
   </a>
 </p>
 

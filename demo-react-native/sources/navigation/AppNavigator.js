@@ -1,28 +1,35 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import MainScreen from '../screens/main';
 import EditPlayer from '../screens/editPlayer';
 import AddPlayer from '../screens/addPlayer';
+import { MAINTITLE, EDITTITLE, ADDTITLE } from '../constants';
 
-export default createAppContainer(
-	createStackNavigator(
-		{
-			Main: { screen: MainScreen },
-			Edit: { screen: EditPlayer },
-			Add: { screen: AddPlayer }
-		},
-		{
-			initialRouteName: 'Main',
-			defaultNavigationOptions: {
-				headerStyle: {
-					backgroundColor: '#4962f6'
-				},
-				headerTintColor: '#ffffff',
-				headerTitleStyle: {
-					fontWeight: 'bold'
-				}
-			}
-		}
-	)
-);
+const Stack = createStackNavigator();
+
+function AppNavigator() {
+	return (
+		<NavigationContainer initialRouteName="MainScreen">
+			<Stack.Navigator>
+				<Stack.Screen
+					name="Main"
+					component={MainScreen}
+					options={{ title: MAINTITLE }}
+				/>
+				<Stack.Screen
+					name="Edit"
+					component={EditPlayer}
+					options={{ title: EDITTITLE }}
+				/>
+				<Stack.Screen
+					name="Add"
+					component={AddPlayer}
+					options={{ title: ADDTITLE }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
+}
+
+export default AppNavigator;

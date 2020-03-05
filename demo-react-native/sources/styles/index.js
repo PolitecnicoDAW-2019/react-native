@@ -113,7 +113,7 @@ const editPlayer = StyleSheet.create({
 		width: '100%',
 		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 25,
+		borderRadius: 15,
 		color: '#ffffff',
 		fontSize: 30
 	}
@@ -140,7 +140,7 @@ const addPlayer = StyleSheet.create({
 		width: '100%',
 		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 25,
+		borderRadius: 15,
 		color: '#ffffff',
 		fontSize: 30
 	}

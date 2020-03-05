@@ -1,17 +1,20 @@
-const breakLine = '\n';
-const closeModal = 'El modal ha sido cerrado';
-const editPlayerTitle = 'Editar jugador';
-const addPlayerTitle = 'Añadir jugador';
-const mainTitle = 'Fútbol Nativo';
-const dataNotFound = 'No resultados encontrados';
-const askPlayerDelete = '¿Quieres eliminar al jugador?';
+/* TODO: change to uppercase */
+const BREAKLINE = '\n';
+const CLOSEMODAL = 'El modal ha sido cerrado';
+const DATANOTFOUND = 'No resultados encontrados';
+const ASKPLAYERDELETE = '¿Quieres eliminar al jugador?';
+const MAINTITLE = 'Fútbol Nativo';
+const EDITTITLE = 'Editar jugador';
+const ADDTITLE = 'Añadir jugador';
+const COLORPRIMARY = '#4962f6';
 
 export {
-	breakLine,
-	closeModal,
-	editPlayerTitle,
-	addPlayerTitle,
-	mainTitle,
-	dataNotFound,
-	askPlayerDelete
+	BREAKLINE,
+	CLOSEMODAL,
+	DATANOTFOUND,
+	ASKPLAYERDELETE,
+	MAINTITLE,
+	EDITTITLE,
+	ADDTITLE,
+	COLORPRIMARY
 };
