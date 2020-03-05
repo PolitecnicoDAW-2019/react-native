@@ -5,10 +5,6 @@ import { editPlayer } from '../../styles';
 import BasicAddItems from '../../components/modifyPlayersData';
 
 export default class EditPlayer extends Component {
-	static navigationOptions = {
-		title: editPlayerTitle
-	};
-
 	constructor({ route, navigation }) {
 		super({ route, navigation });
 
@@ -19,7 +15,6 @@ export default class EditPlayer extends Component {
 		this.state = {
 			player: player.item,
 			handleUpdate: handleUpdate
-
 		};
 	}
 
@@ -32,10 +27,7 @@ export default class EditPlayer extends Component {
 	updateLocalPlayer = property => {
 		const newPlayer = { ...this.state.player, ...property };
 		this.setState({ player: newPlayer });
-		this.props.route.params.player.item.setParams({
-			updatedPlayer: newPlayer
-		});
-	}; 
+	};
 
 	render() {
 		const { player, handleUpdate } = this.state;
