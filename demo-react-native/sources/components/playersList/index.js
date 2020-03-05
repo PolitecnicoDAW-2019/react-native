@@ -1,11 +1,11 @@
 import React from 'react';
 import { FlatList, View } from 'react-native';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
+import { Card, Title, Paragraph } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
 import { breakLine } from '../../constants';
 import { playersList } from '../../styles';
 
-const PlayersList = ({ players, onDelete, onUpdate, onEdit }) => {
+const PlayersList = ({ players, onDelete, onEdit }) => {
 	const renderPlayer = player => {
 		return (
 			<View style={playersList.listItem}>
@@ -19,6 +19,10 @@ const PlayersList = ({ players, onDelete, onUpdate, onEdit }) => {
 							{player.item.position}
 							{breakLine}
 							{player.item.club}
+							{breakLine}
+							{player.item.birthdate}
+							{breakLine}
+							{player.item.history}
 						</Paragraph>
 					</Card.Content>
 					<Card.Actions style={playersList.containerButtons}>

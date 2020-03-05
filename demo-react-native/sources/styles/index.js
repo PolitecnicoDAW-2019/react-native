@@ -3,13 +3,15 @@ import { StyleSheet } from 'react-native';
 const playersList = StyleSheet.create({
 	container: {
 		width: '100%',
-		marginTop: 40
+		paddingTop: 40,
+		paddingBottom: 40
 	},
 	listItem: {
-		width: '100%',
-		flexDirection: 'row',
-		justifyContent: 'center',
-		marginBottom: 30
+		flex: 1,
+		flexDirection: 'column',
+		alignItems: 'center',
+		width: '100%'
+		/* marginBottom: 30 */
 	},
 	icon: {
 		flex: 1,
@@ -20,7 +22,9 @@ const playersList = StyleSheet.create({
 	},
 	card: {
 		width: '70%',
-		elevation: 6
+		marginBottom: 60,
+		elevation: 6,
+		backgroundColor: '#ffffff'
 	},
 	information: {
 		width: '100%',
@@ -64,39 +68,141 @@ const main = StyleSheet.create({
 	},
 	fabAdd: {
 		position: 'absolute',
-		margin: 25,
-		right: 0,
-		bottom: 0,
+		right: 30,
+		bottom: 20,
 		backgroundColor: '#4962f6',
 		elevation: 8
 	},
 	fabSearch: {
 		position: 'absolute',
-		margin: 25,
-		right: 0,
-		bottom: 80,
+		right: 30,
+		bottom: 90,
 		backgroundColor: '#4962f6',
 		elevation: 8
 	},
 	closeSearch: {
 		position: 'absolute',
-		margin: 25,
+		margin: 30,
 		right: 0,
 		top: 0,
-		backgroundColor: '#0E122D',
-		opacity: 0.7,
-		elevation: 8
+		backgroundColor: '#000000',
+		opacity: 0.5,
+		elevation: 6,
+		color: '#ffffff'
 	}
 });
 
 const editPlayer = StyleSheet.create({
-	icon: {
+	container: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	bottomView: {
+		position: 'absolute',
+		bottom: 0,
+		width: '100%',
+		height: 60,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	saveButton: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: 20,
-		height: 20
+		width: '100%',
+		height: 60,
+		backgroundColor: '#4962f6',
+		borderRadius: 25,
+		color: '#ffffff',
+		fontSize: 30
 	}
 });
 
-export { playersList, main, editPlayer };
+const addPlayer = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	bottomView: {
+		position: 'absolute',
+		bottom: 0,
+		width: '100%',
+		height: 60,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	saveButton: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		width: '100%',
+		height: 60,
+		backgroundColor: '#4962f6',
+		borderRadius: 25,
+		color: '#ffffff',
+		fontSize: 30
+	}
+});
+
+const searchPlayer = StyleSheet.create({
+	container: {
+		flex: 1,
+		alignItems: 'flex-end',
+		flexDirection: 'row'
+	},
+	content: {
+		flex: 1,
+		width: '100%',
+		padding: 20,
+		paddingBottom: 30,
+		backgroundColor: '#ffffff',
+		elevation: 30
+	},
+	text: {
+		flex: 5,
+		height: 40,
+		borderColor: 'gray',
+		borderWidth: 1,
+		padding: 5
+	},
+	closeIcon: {
+		color: '#fff'
+	},
+	buttonRow: {
+		flexDirection: 'row',
+		marginTop: 10
+	},
+	block: {
+		margin: 10
+	}
+});
+
+const modifyPlayers = {
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexDirection: 'column'
+	},
+	block: {
+		marginBottom: 10
+	},
+	text: {
+		width: '80%',
+		height: 40,
+		borderColor: 'gray',
+		borderWidth: 1,
+		padding: 5
+	}
+};
+
+export {
+	playersList,
+	main,
+	editPlayer,
+	addPlayer,
+	searchPlayer,
+	modifyPlayers
+};

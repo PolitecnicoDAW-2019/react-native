@@ -1,11 +1,12 @@
-import Player from '../../models/player.model';
+import Player from '../models/player.model';
+
 let players = [
 	new Player({
 		name: 'Cristiano Ronaldo',
 		alias: 'CR7',
 		position: 'delantero',
-		image: require('../../../assets/images/cristiano.jpg'),
-		birthday: '1999-12-12',
+		image: require('../../assets/images/cristiano.jpg'),
+		birthdate: '1999-12-12',
 		history: 'Real Madrid, Juventus',
 		club: 'Juventus'
 	}),
@@ -13,8 +14,8 @@ let players = [
 		name: 'Iker Casillas',
 		alias: 'CASILLAS',
 		position: 'delantero',
-		image: require('../../../assets/images/casillas.jpg'),
-		birthday: '1999-12-12',
+		image: require('../../assets/images/casillas.jpg'),
+		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
 	}),
@@ -22,8 +23,8 @@ let players = [
 		name: 'Gerard Pique',
 		alias: 'PIQUE',
 		position: 'delantero',
-		image: require('../../../assets/images/pike.jpeg'),
-		birthday: '1999-12-12',
+		image: require('../../assets/images/pike.jpeg'),
+		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
 	}),
@@ -31,8 +32,8 @@ let players = [
 		name: 'Eden Hazard',
 		alias: 'HAZARD',
 		position: 'delantero',
-		image: require('../../../assets/images/hazard.jpg'),
-		birthday: '1999-12-12',
+		image: require('../../assets/images/hazard.jpg'),
+		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
 	})
