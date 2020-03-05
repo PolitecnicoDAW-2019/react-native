@@ -5,26 +5,23 @@ import { addPlayer } from '../../styles';
 import BasicAddItems from '../../components/modifyPlayersData';
 
 export default class AddPlayer extends Component {
-	constructor(props) {
-		super(props);
-		this.state = '';
+	constructor({ route, navigation }) {
+		super({ route, navigation });
+		const { handleAdd } = route.params;
+		this.navigation = navigation;
+		this.state = {
+			player: [],
+			handleAdd
+		};
 	}
-
-	/* componentDidMount = async () => {
-		this.props.navigation.setParams({
-			addPlayer: this.state.player
-		});
-	};
 
 	addLocalPlayer = property => {
 		const newPlayer = { ...this.state.player, ...property };
 		this.setState({ player: newPlayer });
-		this.props.navigation.setParams({
-			addPlayer: newPlayer
-		});
-	}; */
+	};
 
 	render() {
+		const { handleAdd } = this.state;
 		return (
 			<View style={addPlayer.container}>
 				<BasicAddItems
@@ -34,7 +31,11 @@ export default class AddPlayer extends Component {
 					<Button
 						mode="contained"
 						style={addPlayer.saveButton}
-						onPress={() => {}}
+						onPress={() => {
+							const newPlayer = this.state.player;
+							handleAdd(newPlayer);
+							this.navigation.goBack();
+						}}
 					>
 						Guardar
 					</Button>

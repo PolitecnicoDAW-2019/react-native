@@ -7,11 +7,8 @@ import BasicAddItems from '../../components/modifyPlayersData';
 export default class EditPlayer extends Component {
 	constructor({ route, navigation }) {
 		super({ route, navigation });
-
 		const { player, handleUpdate } = route.params;
-
 		this.navigation = navigation;
-
 		this.state = {
 			player: player.item,
 			handleUpdate: handleUpdate
