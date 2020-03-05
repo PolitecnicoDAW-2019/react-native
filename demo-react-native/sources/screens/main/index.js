@@ -76,7 +76,7 @@ class MainScreen extends Component {
 	};
 
 	openAddPlayer = () => {
-		this.navigation.navigate('Add', { player, onSave: this.handleAdd });
+		this.navigation.navigate('AddPlayer', { onSave: this.handleAdd });
 	};
 
 	clearSearch = () => {
