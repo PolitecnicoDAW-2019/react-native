@@ -1,4 +1,3 @@
-/* TODO: change to uppercase */
 const BREAKLINE = '\n';
 const CLOSEMODAL = 'El modal ha sido cerrado';
 const DATANOTFOUND = 'No resultados encontrados';

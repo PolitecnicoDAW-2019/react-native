@@ -9,7 +9,7 @@ import {
 import { searchPlayer } from '../../styles';
 import { CLOSEMODAL, COLORPRIMARY } from '../../constants';
 
-const SearchPlayer = ({ modalVisible, handleCLOSEMODAL, handleSearch }) => {
+const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
 	const [value, onChangeText] = React.useState('');
 	return (
 		<Modal
@@ -36,7 +36,7 @@ const SearchPlayer = ({ modalVisible, handleCLOSEMODAL, handleSearch }) => {
 								title="Buscar"
 								onPress={() => {
 									handleSearch(value);
-									handleCLOSEMODAL(false);
+									handleCloseModal(false);
 								}}
 								color={COLORPRIMARY}
 							/>

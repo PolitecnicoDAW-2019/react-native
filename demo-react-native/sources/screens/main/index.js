@@ -10,18 +10,12 @@ import {
 	deletePlayer,
 	updatePlayer
 } from '../../data/players.data';
-import { mainTitle, DATANOTFOUND, ASKPLAYERDELETE } from '../../constants';
+import { DATANOTFOUND, ASKPLAYERDELETE } from '../../constants';
 
 class MainScreen extends Component {
-	static navigationOptions = {
-		title: mainTitle
-	};
-
 	constructor(props) {
 		super(props);
-
 		this.navigation = props.navigation;
-
 		this.state = {
 			players: [],
 			modalVisible: false,
@@ -82,7 +76,7 @@ class MainScreen extends Component {
 	};
 
 	openAddPlayer = () => {
-		this.navigation.navigate('Add', { player, onSave: this.handleAdd });
+		this.navigation.navigate('AddPlayer', { onSave: this.handleAdd });
 	};
 
 	clearSearch = () => {
@@ -116,7 +110,7 @@ class MainScreen extends Component {
 				<FAB style={main.fabAdd} icon="plus" onPress={this.openAddPlayer}></FAB>
 				<SearchPlayer
 					modalVisible={modalVisible}
-					handleCLOSEMODAL={this.handleHideModal}
+					handleCloseModal={this.handleHideModal}
 					handleSearch={this.handleSearch}
 				></SearchPlayer>
 			</View>

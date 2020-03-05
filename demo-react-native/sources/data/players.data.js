@@ -20,10 +20,10 @@ let players = [
 		club: 'testTeam'
 	}),
 	new Player({
-		name: 'Gerard Pique',
-		alias: 'PIQUE',
+		name: 'Lionel Messi',
+		alias: 'MESSI',
 		position: 'delantero',
-		image: require('../../assets/images/pike.jpeg'),
+		image: require('../../assets/images/messi.jpg'),
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
@@ -33,6 +33,15 @@ let players = [
 		alias: 'HAZARD',
 		position: 'delantero',
 		image: require('../../assets/images/hazard.jpg'),
+		birthdate: '1999-12-12',
+		history: 'testTeam',
+		club: 'testTeam'
+	}),
+	new Player({
+		name: 'Gerard Pique',
+		alias: 'PIQUE',
+		position: 'delantero',
+		image: require('../../assets/images/pike.jpeg'),
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
