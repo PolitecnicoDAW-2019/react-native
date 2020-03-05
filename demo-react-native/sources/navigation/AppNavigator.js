@@ -3,7 +3,7 @@ import MainScreen from '../screens/main';
 import EditPlayer from '../screens/editPlayer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MAINTITLE, EDITPLAYERTITLE } from '../constants';
+import { MAINTITLE, EDITTITLE } from '../constants';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +19,7 @@ export default function AppNavigator() {
 				<Stack.Screen
 					name="EditPlayer"
 					component={EditPlayer}
-					options={{ title: EDITPLAYERTITLE }}
+					options={{ title: EDITTITLE }}
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
