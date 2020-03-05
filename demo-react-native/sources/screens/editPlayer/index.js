@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { editPlayer } from '../../styles';
-import BasicAddItems from '../../components/modifyPlayersData';
+import ModifyPlayersData from '../../components/modifyPlayersData';
 
 export default class EditPlayer extends Component {
 	constructor({ route, navigation }) {
@@ -25,7 +25,7 @@ export default class EditPlayer extends Component {
 		const { name, alias, position, birthdate, history, club } = player;
 		return (
 			<View style={editPlayer.container}>
-				<BasicAddItems
+				<ModifyPlayersData
 					name={name}
 					alias={alias}
 					position={position}
@@ -33,7 +33,7 @@ export default class EditPlayer extends Component {
 					history={history}
 					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
-				></BasicAddItems>
+				></ModifyPlayersData>
 				<View style={editPlayer.bottomView}>
 					<Button
 						mode="contained"

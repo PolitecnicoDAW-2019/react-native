@@ -10,7 +10,7 @@ import {
 	deletePlayer,
 	updatePlayer
 } from '../../data/players.data';
-import { DATANOTFOUND, ASKPLAYERDELETE } from '../../constants';
+import { DATA_NOT_FOUND, ASK_PLAYER_DELETE } from '../../constants';
 
 class MainScreen extends Component {
 	constructor(props) {
@@ -39,7 +39,7 @@ class MainScreen extends Component {
 	};
 
 	handleDelete = player => {
-		Alert.alert(ASKPLAYERDELETE, player.text, [
+		Alert.alert(ASK_PLAYER_DELETE, player.text, [
 			{ text: 'Cancelar', style: 'cancel' },
 			{
 				text: 'OK',
@@ -61,7 +61,7 @@ class MainScreen extends Component {
 			({ name }) => name.toLowerCase() === playerName.toLowerCase()
 		);
 		if (newList.length < 1) {
-			alert(DATANOTFOUND);
+			alert(DATA_NOT_FOUND);
 			this.setState({ players: getPlayers() });
 		} else {
 			this.setState({ players: newList, closeSearchButton: true });

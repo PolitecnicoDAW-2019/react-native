@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import { Card, Title, Paragraph } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
-import { BREAKLINE, COLORPRIMARY } from '../../constants';
+import { BREAKLINE, COLOR_PRIMARY } from '../../constants';
 import { playersList } from '../../styles';
 
 const PlayersList = ({ players, onDelete, onEdit }) => {
@@ -31,7 +31,7 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 							onPress={() => onEdit(player)}
 							name="pencil"
 							type="font-awesome"
-							color={COLORPRIMARY}
+							color={COLOR_PRIMARY}
 							size={18}
 						></Icon>
 						<Icon
@@ -39,7 +39,7 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 							onPress={() => onDelete(player)}
 							name="trash"
 							type="font-awesome"
-							color={COLORPRIMARY}
+							color={COLOR_PRIMARY}
 							size={18}
 						></Icon>
 					</Card.Actions>
