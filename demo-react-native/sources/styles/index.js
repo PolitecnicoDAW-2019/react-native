@@ -190,10 +190,6 @@ const modifyPlayers = {
 		marginBottom: 10
 	},
 	text: {
-		width: '80%',
-		height: 40,
-		borderColor: 'gray',
-		borderWidth: 1,
 		padding: 5
 	}
 };
