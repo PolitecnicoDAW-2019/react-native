@@ -113,36 +113,20 @@ const editPlayer = StyleSheet.create({
 		width: '100%',
 		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 15,
+		borderTopLeftRadius: 25,
+		borderTopRightRadius: 25,
 		color: '#ffffff',
 		fontSize: 30
 	}
 });
 
 const addPlayer = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
-	},
-	bottomView: {
-		position: 'absolute',
-		bottom: 0,
-		width: '100%',
-		height: 60,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
 	saveButton: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
 		width: '100%',
 		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 15,
-		color: '#ffffff',
-		fontSize: 30
+		borderTopLeftRadius: 25,
+		borderTopRightRadius: 25
 	}
 });
 
@@ -179,26 +163,4 @@ const searchPlayer = StyleSheet.create({
 	}
 });
 
-const modifyPlayers = {
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'flex-start',
-		flexDirection: 'column'
-	},
-	block: {
-		marginBottom: 10
-	},
-	text: {
-		padding: 5
-	}
-};
-
-export {
-	playersList,
-	main,
-	editPlayer,
-	addPlayer,
-	searchPlayer,
-	modifyPlayers
-};
+export { playersList, main, editPlayer, addPlayer, searchPlayer };
