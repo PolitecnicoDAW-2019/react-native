@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./private/favicon.svg" alt="React Logo" width="150" height="100">
+  <img src="./demo-react-native/assets/images/favicon.svg" alt="React Logo" width="100" height="100">
 </p>
 
 <h1 align="center">
@@ -28,6 +28,9 @@
   </a>
   <a href="https://babeljs.io/">
     <img src="https://img.shields.io/badge/compiler-Babel-yellow.svg" alt="code formatter." />
+  </a>
+  <a href="https://babeljs.io/">
+    <img src="https://img.shields.io/badge/platform-Android%20|%20iOS-9cf.svg" alt="code formatter." />
   </a>
 </p>
 

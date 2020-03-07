@@ -23,12 +23,13 @@ export default class AddPlayer extends Component {
 	render() {
 		const { handleAdd } = this.state;
 		return (
-			<View>
+			<View style={addPlayer.container}>
 				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
 				></ModifyPlayersData>
 				<Button
-					mode="contained"
+					mode="text"
+					color="#ffffff"
 					style={addPlayer.saveButton}
 					onPress={() => {
 						const newPlayer = this.state.player;

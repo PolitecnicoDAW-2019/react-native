@@ -95,38 +95,38 @@ const main = StyleSheet.create({
 const editPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		width: '100%',
+		height: '100%'
 	},
-	bottomView: {
+	saveButton: {
 		position: 'absolute',
 		bottom: 0,
 		width: '100%',
-		height: 60,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	saveButton: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: '100%',
-		height: 60,
 		backgroundColor: '#4962f6',
 		borderTopLeftRadius: 25,
 		borderTopRightRadius: 25,
-		color: '#ffffff',
-		fontSize: 30
+		borderBottomLeftRadius: 0,
+		borderBottomRightRadius: 0
 	}
 });
 
 const addPlayer = StyleSheet.create({
-	saveButton: {
+	container: {
+		flex: 1,
+		justifyContent: 'center',
 		width: '100%',
-		height: 60,
+		height: '100%'
+	},
+	saveButton: {
+		position: 'absolute',
+		bottom: 0,
+		width: '100%',
 		backgroundColor: '#4962f6',
 		borderTopLeftRadius: 25,
-		borderTopRightRadius: 25
+		borderTopRightRadius: 25,
+		borderBottomLeftRadius: 0,
+		borderBottomRightRadius: 0
 	}
 });
 
@@ -163,4 +163,18 @@ const searchPlayer = StyleSheet.create({
 	}
 });
 
-export { playersList, main, editPlayer, addPlayer, searchPlayer };
+const modifyPlayersData = StyleSheet.create({
+	text: {
+		backgroundColor: '#ffffff',
+		marginBottom: 25
+	}
+});
+
+export {
+	playersList,
+	main,
+	editPlayer,
+	addPlayer,
+	searchPlayer,
+	modifyPlayersData
+};
