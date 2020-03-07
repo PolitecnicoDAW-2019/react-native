@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { editPlayer } from '../../styles';
 import ModifyPlayersData from '../../components/modifyPlayersData';
+import { COLOR_PRIMARY } from '../../constants';
 
 export default class EditPlayer extends Component {
 	constructor({ route, navigation }) {
@@ -35,17 +36,17 @@ export default class EditPlayer extends Component {
 					onChange={property => this.updateLocalPlayer(property)}
 				></ModifyPlayersData>
 				<Button
-					mode="text"
-					color="#ffffff"
+					mode="contained"
+					color={COLOR_PRIMARY}
+					contentStyle={{ height: 60 }}
+					children="Guardar"
 					style={editPlayer.saveButton}
 					onPress={() => {
 						const newPlayer = this.state.player;
 						handleUpdate(newPlayer);
 						this.navigation.goBack();
 					}}
-				>
-					Guardar
-				</Button>
+				></Button>
 			</View>
 		);
 	}
