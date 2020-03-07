@@ -95,54 +95,38 @@ const main = StyleSheet.create({
 const editPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		width: '100%',
+		height: '100%'
 	},
-	bottomView: {
+	saveButton: {
 		position: 'absolute',
 		bottom: 0,
 		width: '100%',
-		height: 60,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	saveButton: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: '100%',
-		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 15,
-		color: '#ffffff',
-		fontSize: 30
+		borderTopLeftRadius: 25,
+		borderTopRightRadius: 25,
+		borderBottomLeftRadius: 0,
+		borderBottomRightRadius: 0
 	}
 });
 
 const addPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		width: '100%',
+		height: '100%'
 	},
-	bottomView: {
+	saveButton: {
 		position: 'absolute',
 		bottom: 0,
 		width: '100%',
-		height: 60,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-	saveButton: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: '100%',
-		height: 60,
 		backgroundColor: '#4962f6',
-		borderRadius: 15,
-		color: '#ffffff',
-		fontSize: 30
+		borderTopLeftRadius: 25,
+		borderTopRightRadius: 25,
+		borderBottomLeftRadius: 0,
+		borderBottomRightRadius: 0
 	}
 });
 
@@ -179,24 +163,12 @@ const searchPlayer = StyleSheet.create({
 	}
 });
 
-const modifyPlayers = {
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'flex-start',
-		flexDirection: 'column'
-	},
-	block: {
-		marginBottom: 10
-	},
+const modifyPlayersData = StyleSheet.create({
 	text: {
-		width: '80%',
-		height: 40,
-		borderColor: 'gray',
-		borderWidth: 1,
-		padding: 5
+		backgroundColor: '#ffffff',
+		marginBottom: 25
 	}
-};
+});
 
 export {
 	playersList,
@@ -204,5 +176,5 @@ export {
 	editPlayer,
 	addPlayer,
 	searchPlayer,
-	modifyPlayers
+	modifyPlayersData
 };

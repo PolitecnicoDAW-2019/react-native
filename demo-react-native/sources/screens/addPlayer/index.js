@@ -27,19 +27,18 @@ export default class AddPlayer extends Component {
 				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
 				></ModifyPlayersData>
-				<View style={addPlayer.bottomView}>
-					<Button
-						mode="contained"
-						style={addPlayer.saveButton}
-						onPress={() => {
-							const newPlayer = this.state.player;
-							handleAdd(newPlayer);
-							this.navigation.goBack();
-						}}
-					>
-						Guardar
-					</Button>
-				</View>
+				<Button
+					mode="text"
+					color="#ffffff"
+					style={addPlayer.saveButton}
+					onPress={() => {
+						const newPlayer = this.state.player;
+						handleAdd(newPlayer);
+						this.navigation.goBack();
+					}}
+				>
+					Guardar
+				</Button>
 			</View>
 		);
 	}

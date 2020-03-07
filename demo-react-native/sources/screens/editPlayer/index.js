@@ -34,19 +34,18 @@ export default class EditPlayer extends Component {
 					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
 				></ModifyPlayersData>
-				<View style={editPlayer.bottomView}>
-					<Button
-						mode="contained"
-						style={editPlayer.saveButton}
-						onPress={() => {
-							const newPlayer = this.state.player;
-							handleUpdate(newPlayer);
-							this.navigation.goBack();
-						}}
-					>
-						Guardar
-					</Button>
-				</View>
+				<Button
+					mode="text"
+					color="#ffffff"
+					style={editPlayer.saveButton}
+					onPress={() => {
+						const newPlayer = this.state.player;
+						handleUpdate(newPlayer);
+						this.navigation.goBack();
+					}}
+				>
+					Guardar
+				</Button>
 			</View>
 		);
 	}
