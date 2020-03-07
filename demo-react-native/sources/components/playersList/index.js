@@ -27,6 +27,7 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 					</Card.Content>
 					<Card.Actions style={playersList.containerButtons}>
 						<Icon
+							raised
 							style={playersList.icon}
 							onPress={() => onEdit(player)}
 							name="pencil"
@@ -35,6 +36,7 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 							size={18}
 						></Icon>
 						<Icon
+							raised
 							style={playersList.icon}
 							onPress={() => onDelete(player)}
 							name="trash"

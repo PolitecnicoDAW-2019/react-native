@@ -6,6 +6,7 @@ const MAIN_TITLE = 'Fútbol Nativo';
 const EDIT_TITLE = 'Editar jugador';
 const ADD_TITLE = 'Añadir jugador';
 const COLOR_PRIMARY = '#4962f6';
+const COLOR_WHITE = '#ffffff';
 
 export {
 	BREAKLINE,
@@ -15,5 +16,6 @@ export {
 	MAIN_TITLE,
 	EDIT_TITLE,
 	ADD_TITLE,
-	COLOR_PRIMARY
+	COLOR_PRIMARY,
+	COLOR_WHITE
 };

@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-	View,
-	Modal,
-	TextInput,
-	KeyboardAvoidingView,
-	Button
-} from 'react-native';
+import { View, Modal, KeyboardAvoidingView } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
 import { searchPlayer } from '../../styles';
-import { CLOSE_MODAL, COLOR_PRIMARY } from '../../constants';
+import { CLOSE_MODAL, COLOR_PRIMARY, COLOR_WHITE } from '../../constants';
 
 const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
 	const [value, onChangeText] = React.useState('');
@@ -25,23 +20,22 @@ const SearchPlayer = ({ modalVisible, handleCloseModal, handleSearch }) => {
 					style={searchPlayer.content}
 					behavior={Platform.OS === 'ios' ? 'padding' : null}
 				>
-					<View>
-						<View style={searchPlayer.buttonRow}>
-							<TextInput
-								style={searchPlayer.text}
-								onChangeText={text => onChangeText(text)}
-								value={value}
-							/>
-							<Button
-								title="Buscar"
-								onPress={() => {
-									handleSearch(value);
-									handleCloseModal(false);
-								}}
-								color={COLOR_PRIMARY}
-							/>
-						</View>
-					</View>
+					<TextInput
+						style={searchPlayer.text}
+						onChangeText={text => onChangeText(text)}
+						value={value}
+					></TextInput>
+					<Button
+						mode="contained"
+						style={searchPlayer.button}
+						color={COLOR_PRIMARY}
+						contentStyle={{ height: 45 }}
+						children="Buscar"
+						onPress={() => {
+							handleSearch(value);
+							handleCloseModal(false);
+						}}
+					></Button>
 				</KeyboardAvoidingView>
 			</View>
 		</Modal>
