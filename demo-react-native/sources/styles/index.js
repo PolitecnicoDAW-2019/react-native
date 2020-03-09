@@ -3,32 +3,34 @@ import { StyleSheet } from 'react-native';
 const playersList = StyleSheet.create({
 	container: {
 		width: '100%',
-		paddingTop: 40,
-		paddingBottom: 40
+		paddingTop: 40
 	},
 	listItem: {
 		flex: 1,
 		flexDirection: 'column',
 		alignItems: 'center',
 		width: '100%'
-		/* marginBottom: 30 */
+	},
+	title: {
+		marginTop: 15,
+		marginBottom: 10
 	},
 	icon: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: 20,
-		height: 20
+		width: 40,
+		height: 40
 	},
 	card: {
 		width: '70%',
-		marginBottom: 60,
-		elevation: 6,
+		marginBottom: 35,
+		elevation: 3,
 		backgroundColor: '#ffffff'
 	},
 	information: {
 		width: '100%',
-		fontSize: 12
+		fontSize: 14
 	},
 	paragraph: {
 		color: '#a6a6a6',
@@ -38,7 +40,8 @@ const playersList = StyleSheet.create({
 	},
 	containerButtons: {
 		flex: 1,
-		justifyContent: 'space-around',
+		height: 70,
+		justifyContent: 'flex-end',
 		alignItems: 'center',
 		backgroundColor: '#fafafa'
 	}
@@ -46,7 +49,7 @@ const playersList = StyleSheet.create({
 
 const main = StyleSheet.create({
 	containerMain: {
-		backgroundColor: '#f9f9fa',
+		backgroundColor: '#f9f9f9',
 		margin: 0,
 		height: '100%'
 	},
@@ -95,7 +98,7 @@ const main = StyleSheet.create({
 const editPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
 		width: '100%',
 		height: '100%'
 	},
@@ -103,7 +106,6 @@ const editPlayer = StyleSheet.create({
 		position: 'absolute',
 		bottom: 0,
 		width: '100%',
-		backgroundColor: '#4962f6',
 		borderTopLeftRadius: 25,
 		borderTopRightRadius: 25,
 		borderBottomLeftRadius: 0,
@@ -114,7 +116,7 @@ const editPlayer = StyleSheet.create({
 const addPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
 		width: '100%',
 		height: '100%'
 	},
@@ -122,7 +124,6 @@ const addPlayer = StyleSheet.create({
 		position: 'absolute',
 		bottom: 0,
 		width: '100%',
-		backgroundColor: '#4962f6',
 		borderTopLeftRadius: 25,
 		borderTopRightRadius: 25,
 		borderBottomLeftRadius: 0,
@@ -133,33 +134,27 @@ const addPlayer = StyleSheet.create({
 const searchPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: 'flex-end',
-		flexDirection: 'row'
+		flexDirection: 'row',
+		alignItems: 'flex-end'
 	},
 	content: {
-		flex: 1,
 		width: '100%',
-		padding: 20,
-		paddingBottom: 30,
+		padding: 30,
 		backgroundColor: '#ffffff',
-		elevation: 30
+		elevation: 15
 	},
 	text: {
-		flex: 5,
-		height: 40,
-		borderColor: 'gray',
-		borderWidth: 1,
-		padding: 5
+		width: '100%',
+		height: 55,
+		borderTopWidth: 0.5,
+		borderLeftWidth: 0.5,
+		borderRightWidth: 0.5,
+		borderColor: '#a6a6a6',
+		backgroundColor: '#ffffff'
 	},
-	closeIcon: {
-		color: '#fff'
-	},
-	buttonRow: {
-		flexDirection: 'row',
-		marginTop: 10
-	},
-	block: {
-		margin: 10
+	button: {
+		color: '#fff',
+		elevation: 0
 	}
 });
 
@@ -170,11 +165,21 @@ const modifyPlayersData = StyleSheet.create({
 	}
 });
 
+const imagePicker = StyleSheet.create({
+	container: {
+		width: '100%',
+		height: 200,
+		backgroundColor: '#cacaca',
+		marginBottom: 50
+	}
+});
+
 export {
 	playersList,
 	main,
 	editPlayer,
 	addPlayer,
 	searchPlayer,
-	modifyPlayersData
+	modifyPlayersData,
+	imagePicker
 };

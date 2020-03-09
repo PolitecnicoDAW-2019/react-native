@@ -14,24 +14,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/facebook/react-native/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-orange.svg" alt="React Native is released under the MIT license." />
-  </a>
-  <a href="https://www.npmjs.org/package/react-native">
     <img src="https://img.shields.io/badge/npm%20version-6.13.7-success.svg" alt="Current npm package version." />
-  </a>
-  <a href="https://expo.io/">
     <img src="https://img.shields.io/badge/builder-Expo-blue.svg" alt="builder library." />
-  </a>
-  <a href="https://prettier.io/">
     <img src="https://img.shields.io/badge/formatter-Prettier-ff69b4.svg" alt="code formatter." />
-  </a>
-  <a href="https://babeljs.io/">
     <img src="https://img.shields.io/badge/compiler-Babel-yellow.svg" alt="code formatter." />
-  </a>
-  <a href="https://babeljs.io/">
     <img src="https://img.shields.io/badge/platform-Android%20|%20iOS-9cf.svg" alt="code formatter." />
-  </a>
 </p>
 
 ## Contents

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import MainScreen from '../screens/main';
 import EditPlayer from '../screens/editPlayer';
 import AddPlayer from '../screens/addPlayer';
