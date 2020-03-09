@@ -98,7 +98,7 @@ const main = StyleSheet.create({
 const editPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
 		width: '100%',
 		height: '100%'
 	},
@@ -116,7 +116,7 @@ const editPlayer = StyleSheet.create({
 const addPlayer = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
 		width: '100%',
 		height: '100%'
 	},
@@ -165,11 +165,21 @@ const modifyPlayersData = StyleSheet.create({
 	}
 });
 
+const imagePicker = StyleSheet.create({
+	container: {
+		width: '100%',
+		height: 200,
+		backgroundColor: '#cacaca',
+		marginBottom: 50
+	}
+});
+
 export {
 	playersList,
 	main,
 	editPlayer,
 	addPlayer,
 	searchPlayer,
-	modifyPlayersData
+	modifyPlayersData,
+	imagePicker
 };

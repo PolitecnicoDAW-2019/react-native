@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { modifyPlayersData } from '../../styles';
-/* import ImagePickerCustom from '../imagePicker'; */
+import ImagePickerCustom from '../imagePicker';
 
 const ModifyPlayersData = ({
 	name,
@@ -14,7 +14,7 @@ const ModifyPlayersData = ({
 	onChange
 }) => (
 	<View>
-		{/* <ImagePickerCustom></ImagePickerCustom> */}
+		<ImagePickerCustom></ImagePickerCustom>
 		<TextInput
 			label="Nombre"
 			value={name}
