@@ -10,7 +10,7 @@ const PlayersList = ({ players, onDelete, onEdit }) => {
 		return (
 			<View style={playersList.listItem}>
 				<Card style={playersList.card}>
-					<Card.Cover source={player.item.image}></Card.Cover>
+					<Card.Cover source={{ uri: player.item.image }}></Card.Cover>
 					<Card.Content>
 						<Title style={playersList.title}>{player.item.name}</Title>
 						<Paragraph style={playersList.paragraph}>

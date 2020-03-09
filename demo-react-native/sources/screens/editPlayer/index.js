@@ -34,6 +34,7 @@ export default class EditPlayer extends Component {
 					history={history}
 					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
+					onChangeImage={image => this.updateLocalPlayer({ image: image })}
 				></ModifyPlayersData>
 				<Button
 					mode="contained"

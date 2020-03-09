@@ -27,6 +27,7 @@ export default class AddPlayer extends Component {
 			<View style={addPlayer.container}>
 				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
+					onChangeImage={image => this.addLocalPlayer({ image: image })}
 				></ModifyPlayersData>
 				<Button
 					mode="contained"

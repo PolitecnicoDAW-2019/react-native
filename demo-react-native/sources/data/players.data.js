@@ -5,7 +5,8 @@ let players = [
 		name: 'Cristiano Ronaldo',
 		alias: 'CR7',
 		position: 'delantero',
-		image: require('../../assets/images/cristiano.jpg'),
+		image:
+			'https://ep01.epimg.net/deportes/imagenes/2018/06/15/actualidad/1529066910_542434_1529067125_noticia_normal.jpg',
 		birthdate: '1999-12-12',
 		history: 'Real Madrid, Juventus',
 		club: 'Juventus'
@@ -14,7 +15,8 @@ let players = [
 		name: 'Iker Casillas',
 		alias: 'CASILLAS',
 		position: 'delantero',
-		image: require('../../assets/images/casillas.jpg'),
+		image:
+			'https://okdiario.com/img/2020/03/04/casillas-investigado-ok-655x368.jpg',
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
@@ -23,7 +25,8 @@ let players = [
 		name: 'Lionel Messi',
 		alias: 'MESSI',
 		position: 'delantero',
-		image: require('../../assets/images/messi.jpg'),
+		image:
+			'https://static.t13.cl/images/sizes/1200x675/1555517174-0001fp56a.jpg',
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
@@ -32,7 +35,8 @@ let players = [
 		name: 'Eden Hazard',
 		alias: 'HAZARD',
 		position: 'delantero',
-		image: require('../../assets/images/hazard.jpg'),
+		image:
+			'https://tmssl.akamaized.net/images/foto/big/eden-hazard-real-madrid-1568368938-25709.jpg',
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'
@@ -41,7 +45,8 @@ let players = [
 		name: 'Gerard Pique',
 		alias: 'PIQUE',
 		position: 'delantero',
-		image: require('../../assets/images/pike.jpeg'),
+		image:
+			'https://ep01.epimg.net/deportes/imagenes/2017/07/23/actualidad/1500832133_490125_1500852796_noticia_normal.jpg',
 		birthdate: '1999-12-12',
 		history: 'testTeam',
 		club: 'testTeam'

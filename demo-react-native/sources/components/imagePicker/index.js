@@ -7,9 +7,14 @@ import { COLOR_PRIMARY } from '../../constants';
 import { imagePicker } from '../../styles';
 
 export default class ImagePickerCustom extends Component {
-	state = {
-		image: null
-	};
+	constructor(props) {
+		super(props);
+		const { onChangeImageCustom } = props;
+		this.state = {
+			image: null,
+			onChangeImage: onChangeImageCustom
+		};
+	}
 
 	componentDidMount() {
 		this.getPermissionAsync();
@@ -31,11 +36,11 @@ export default class ImagePickerCustom extends Component {
 			aspect: [4, 3],
 			quality: 1
 		});
-
-		console.log(result);
+		const { onChangeImage } = this.state;
 
 		if (!result.cancelled) {
 			this.setState({ image: result.uri });
+			onChangeImage(result.uri);
 		}
 	};
 
@@ -51,9 +56,9 @@ export default class ImagePickerCustom extends Component {
 					title="Pick an image from camera roll"
 					onPress={this._pickImage}
 				></Button>
-				{/* {image && (
+				{image && (
 					<Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-				)} */}
+				)}
 			</View>
 		);
 	}
