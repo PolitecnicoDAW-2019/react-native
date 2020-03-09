@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Image, View } from 'react-native';
-import ImagePicker from 'expo-image-picker';
-import Permissions from 'expo-permissions';
+import * as ImagePicker from 'expo-image-picker';
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
+import { COLOR_PRIMARY } from '../../constants';
+import { imagePicker } from '../../styles';
 
-export class ImagePickerCustom extends Component {
+export default class ImagePickerCustom extends Component {
 	state = {
 		image: null
 	};
@@ -29,6 +32,8 @@ export class ImagePickerCustom extends Component {
 			quality: 1
 		});
 
+		console.log(result);
+
 		if (!result.cancelled) {
 			this.setState({ image: result.uri });
 		}
@@ -36,22 +41,19 @@ export class ImagePickerCustom extends Component {
 
 	render() {
 		let { image } = this.state;
-
 		return (
-			<View
-				style={{
-					flex: 1,
-					alignItems: 'center',
-					justifyContent: 'center'
-				}}
-			>
+			<View style={imagePicker.container}>
 				<Button
+					mode="contained"
+					style={imagePicker.button}
+					color={COLOR_PRIMARY}
+					contentStyle={{ height: 25 }}
 					title="Pick an image from camera roll"
 					onPress={this._pickImage}
-				/>
-				{image && (
+				></Button>
+				{/* {image && (
 					<Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-				)}
+				)} */}
 			</View>
 		);
 	}
