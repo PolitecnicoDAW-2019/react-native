@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { editPlayer } from '../../styles';
 import ModifyPlayersData from '../../components/modifyPlayersData';
@@ -25,7 +25,7 @@ export default class EditPlayer extends Component {
 		const { player, handleUpdate } = this.state;
 		const { name, alias, position, birthdate, history, club } = player;
 		return (
-			<View style={editPlayer.container}>
+			<ScrollView style={editPlayer.container}>
 				<Button
 					mode="contained"
 					color={COLOR_PRIMARY_LIGHT}
@@ -47,7 +47,7 @@ export default class EditPlayer extends Component {
 					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
 				></ModifyPlayersData>
-			</View>
+			</ScrollView>
 		);
 	}
 }

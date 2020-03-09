@@ -160,7 +160,7 @@ const imagePicker = StyleSheet.create({
 		backgroundColor: '#fafafa'
 	},
 	button: {
-		marginTop: 50,
+		marginTop: 25,
 		borderRadius: 0
 	},
 	image: {

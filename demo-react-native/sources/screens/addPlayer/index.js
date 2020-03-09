@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { addPlayer } from '../../styles';
 import ModifyPlayersData from '../../components/modifyPlayersData';
@@ -24,7 +24,7 @@ export default class AddPlayer extends Component {
 	render() {
 		const { handleAdd } = this.state;
 		return (
-			<View style={addPlayer.container}>
+			<ScrollView style={addPlayer.container}>
 				<Button
 					mode="contained"
 					color={COLOR_PRIMARY_LIGHT}
@@ -40,7 +40,7 @@ export default class AddPlayer extends Component {
 				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
 				></ModifyPlayersData>
-			</View>
+			</ScrollView>
 		);
 	}
 }
