@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { editPlayer } from '../../styles';
 import ModifyPlayersData from '../../components/modifyPlayersData';
-import { COLOR_PRIMARY } from '../../constants';
+import { SAVE, COLOR_PRIMARY_LIGHT } from '../../constants';
 
 export default class EditPlayer extends Component {
 	constructor({ route, navigation }) {
@@ -25,7 +25,19 @@ export default class EditPlayer extends Component {
 		const { player, handleUpdate } = this.state;
 		const { name, alias, position, birthdate, history, club } = player;
 		return (
-			<View style={editPlayer.container}>
+			<ScrollView style={editPlayer.container}>
+				<Button
+					mode="contained"
+					color={COLOR_PRIMARY_LIGHT}
+					contentStyle={{ height: 60 }}
+					children={SAVE}
+					style={editPlayer.saveButton}
+					onPress={() => {
+						const newPlayer = this.state.player;
+						handleUpdate(newPlayer);
+						this.navigation.goBack();
+					}}
+				></Button>
 				<ModifyPlayersData
 					name={name}
 					alias={alias}
@@ -34,20 +46,9 @@ export default class EditPlayer extends Component {
 					history={history}
 					club={club}
 					onChange={property => this.updateLocalPlayer(property)}
+					onChangeImage={image => this.updateLocalPlayer({ image: image })}
 				></ModifyPlayersData>
-				<Button
-					mode="contained"
-					color={COLOR_PRIMARY}
-					contentStyle={{ height: 60 }}
-					children="Guardar"
-					style={editPlayer.saveButton}
-					onPress={() => {
-						const newPlayer = this.state.player;
-						handleUpdate(newPlayer);
-						this.navigation.goBack();
-					}}
-				></Button>
-			</View>
+			</ScrollView>
 		);
 	}
 }

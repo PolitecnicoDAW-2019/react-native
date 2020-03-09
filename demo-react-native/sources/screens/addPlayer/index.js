@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 import { addPlayer } from '../../styles';
 import ModifyPlayersData from '../../components/modifyPlayersData';
-import { COLOR_PRIMARY } from '../../constants';
+import { COLOR_PRIMARY_LIGHT, SAVE } from '../../constants';
 
 export default class AddPlayer extends Component {
 	constructor({ route, navigation }) {
@@ -24,15 +24,12 @@ export default class AddPlayer extends Component {
 	render() {
 		const { handleAdd } = this.state;
 		return (
-			<View style={addPlayer.container}>
-				<ModifyPlayersData
-					onChange={property => this.addLocalPlayer(property)}
-				></ModifyPlayersData>
+			<ScrollView style={addPlayer.container}>
 				<Button
 					mode="contained"
-					color={COLOR_PRIMARY}
+					color={COLOR_PRIMARY_LIGHT}
 					contentStyle={{ height: 60 }}
-					children="Guardar"
+					children={SAVE}
 					style={addPlayer.saveButton}
 					onPress={() => {
 						const newPlayer = this.state.player;
@@ -40,7 +37,11 @@ export default class AddPlayer extends Component {
 						this.navigation.goBack();
 					}}
 				></Button>
-			</View>
+				<ModifyPlayersData
+					onChange={property => this.addLocalPlayer(property)}
+					onChangeImage={image => this.addLocalPlayer({ image: image })}
+				></ModifyPlayersData>
+			</ScrollView>
 		);
 	}
 }
