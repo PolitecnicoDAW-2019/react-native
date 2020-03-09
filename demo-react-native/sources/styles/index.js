@@ -97,37 +97,23 @@ const main = StyleSheet.create({
 
 const editPlayer = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: 'flex-start',
-		width: '100%',
-		height: '100%'
+		width: '100%'
 	},
 	saveButton: {
-		position: 'absolute',
-		bottom: 0,
 		width: '100%',
-		borderTopLeftRadius: 25,
-		borderTopRightRadius: 25,
-		borderBottomLeftRadius: 0,
-		borderBottomRightRadius: 0
+		borderRadius: 0,
+		marginBottom: 60
 	}
 });
 
 const addPlayer = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: 'flex-start',
-		width: '100%',
-		height: '100%'
+		width: '100%'
 	},
 	saveButton: {
-		position: 'absolute',
-		bottom: 0,
 		width: '100%',
-		borderTopLeftRadius: 25,
-		borderTopRightRadius: 25,
-		borderBottomLeftRadius: 0,
-		borderBottomRightRadius: 0
+		borderRadius: 0,
+		marginBottom: 60
 	}
 });
 
@@ -153,12 +139,15 @@ const searchPlayer = StyleSheet.create({
 		backgroundColor: '#ffffff'
 	},
 	button: {
-		color: '#fff',
+		color: '#ffffff',
 		elevation: 0
 	}
 });
 
 const modifyPlayersData = StyleSheet.create({
+	container: {
+		backgroundColor: '#f9f9f9'
+	},
 	text: {
 		backgroundColor: '#ffffff',
 		marginBottom: 25
@@ -168,9 +157,15 @@ const modifyPlayersData = StyleSheet.create({
 const imagePicker = StyleSheet.create({
 	container: {
 		width: '100%',
-		height: 200,
-		backgroundColor: '#cacaca',
-		marginBottom: 50
+		backgroundColor: '#fafafa'
+	},
+	button: {
+		marginTop: 50,
+		borderRadius: 0
+	},
+	image: {
+		width: '100%',
+		height: 250
 	}
 });
 

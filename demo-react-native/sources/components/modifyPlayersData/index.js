@@ -13,8 +13,7 @@ const ModifyPlayersData = ({
 	club,
 	onChange
 }) => (
-	<View>
-		<ImagePickerCustom></ImagePickerCustom>
+	<View style={modifyPlayersData.container}>
 		<TextInput
 			label="Nombre"
 			value={name}
@@ -51,6 +50,7 @@ const ModifyPlayersData = ({
 			style={modifyPlayersData.text}
 			onChangeText={club => onChange({ club })}
 		></TextInput>
+		<ImagePickerCustom></ImagePickerCustom>
 	</View>
 );
 

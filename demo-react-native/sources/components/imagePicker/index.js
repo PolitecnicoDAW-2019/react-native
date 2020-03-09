@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Image, View } from 'react-native';
+import { Image, View } from 'react-native';
+import { Button } from 'react-native-paper';
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
-import { COLOR_PRIMARY } from '../../constants';
+import { COLOR_PRIMARY, PLAYER_IMAGE } from '../../constants';
 import { imagePicker } from '../../styles';
 
 export default class ImagePickerCustom extends Component {
@@ -28,7 +29,7 @@ export default class ImagePickerCustom extends Component {
 		let result = await ImagePicker.launchImageLibraryAsync({
 			mediaTypes: ImagePicker.MediaTypeOptions.All,
 			allowsEditing: true,
-			aspect: [4, 3],
+			aspect: [16, 9],
 			quality: 1
 		});
 
@@ -45,15 +46,15 @@ export default class ImagePickerCustom extends Component {
 			<View style={imagePicker.container}>
 				<Button
 					mode="contained"
-					style={imagePicker.button}
 					color={COLOR_PRIMARY}
-					contentStyle={{ height: 25 }}
-					title="Pick an image from camera roll"
+					contentStyle={{ height: 50 }}
+					children={PLAYER_IMAGE}
+					style={imagePicker.button}
 					onPress={this._pickImage}
 				></Button>
-				{/* {image && (
-					<Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-				)} */}
+				{image && (
+					<Image source={{ uri: image }} style={imagePicker.image}></Image>
+				)}
 			</View>
 		);
 	}

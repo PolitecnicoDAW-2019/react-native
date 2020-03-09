@@ -7,6 +7,9 @@ const EDIT_TITLE = 'Editar jugador';
 const ADD_TITLE = 'Añadir jugador';
 const COLOR_PRIMARY = '#4962f6';
 const COLOR_WHITE = '#ffffff';
+const PLAYER_IMAGE = 'Sube una imagen';
+const SAVE = 'Guardar';
+const COLOR_PRIMARY_LIGHT = '#566df5';
 
 export {
 	BREAKLINE,
@@ -17,5 +20,8 @@ export {
 	EDIT_TITLE,
 	ADD_TITLE,
 	COLOR_PRIMARY,
-	COLOR_WHITE
+	COLOR_WHITE,
+	PLAYER_IMAGE,
+	SAVE,
+	COLOR_PRIMARY_LIGHT
 };
