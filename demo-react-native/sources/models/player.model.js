@@ -5,7 +5,7 @@ export default class Player {
 		name,
 		alias,
 		position,
-		image = require('../../assets/images/default.jpg'),
+		image = 'https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 		birthdate,
 		history,
 		club

@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 const playersList = StyleSheet.create({
 	container: {
 		width: '100%',
-		paddingTop: 40
+		paddingTop: 50,
+		paddingBottom: 10
 	},
 	listItem: {
 		flex: 1,

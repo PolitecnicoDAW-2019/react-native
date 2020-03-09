@@ -10,6 +10,8 @@ const COLOR_WHITE = '#ffffff';
 const PLAYER_IMAGE = 'Sube una imagen';
 const SAVE = 'Guardar';
 const COLOR_PRIMARY_LIGHT = '#566df5';
+const PERMISSIONS =
+	'Lo siento, se necesita permisos de la cámara para funcionar';
 
 export {
 	BREAKLINE,
@@ -23,5 +25,6 @@ export {
 	COLOR_WHITE,
 	PLAYER_IMAGE,
 	SAVE,
-	COLOR_PRIMARY_LIGHT
+	COLOR_PRIMARY_LIGHT,
+	PERMISSIONS
 };

@@ -39,6 +39,7 @@ export default class AddPlayer extends Component {
 				></Button>
 				<ModifyPlayersData
 					onChange={property => this.addLocalPlayer(property)}
+					onChangeImage={image => this.addLocalPlayer({ image: image })}
 				></ModifyPlayersData>
 			</ScrollView>
 		);
