@@ -34,7 +34,7 @@ const playersList = StyleSheet.create({
 		fontSize: 14
 	},
 	paragraph: {
-		color: '#a6a6a6',
+		color: '#b8bcc7',
 		fontSize: 14,
 		textTransform: 'capitalize',
 		marginBottom: 15
@@ -50,7 +50,7 @@ const playersList = StyleSheet.create({
 
 const main = StyleSheet.create({
 	containerMain: {
-		backgroundColor: '#f9f9f9',
+		backgroundColor: '#fafafa',
 		margin: 0,
 		height: '100%'
 	},
@@ -74,14 +74,14 @@ const main = StyleSheet.create({
 		position: 'absolute',
 		right: 30,
 		bottom: 20,
-		backgroundColor: '#4962f6',
+		backgroundColor: '#4361ba',
 		elevation: 8
 	},
 	fabSearch: {
 		position: 'absolute',
 		right: 30,
 		bottom: 90,
-		backgroundColor: '#4962f6',
+		backgroundColor: '#4361ba',
 		elevation: 8
 	},
 	closeSearch: {
@@ -136,7 +136,7 @@ const searchPlayer = StyleSheet.create({
 		borderTopWidth: 0.5,
 		borderLeftWidth: 0.5,
 		borderRightWidth: 0.5,
-		borderColor: '#a6a6a6',
+		borderColor: '#b8bcc7',
 		backgroundColor: '#ffffff'
 	},
 	button: {
@@ -147,7 +147,7 @@ const searchPlayer = StyleSheet.create({
 
 const modifyPlayersData = StyleSheet.create({
 	container: {
-		backgroundColor: '#f9f9f9'
+		backgroundColor: '#e4e9ef'
 	},
 	text: {
 		backgroundColor: '#ffffff',
@@ -158,7 +158,7 @@ const modifyPlayersData = StyleSheet.create({
 const imagePicker = StyleSheet.create({
 	container: {
 		width: '100%',
-		backgroundColor: '#fafafa'
+		backgroundColor: '#e4e9ef'
 	},
 	button: {
 		marginTop: 25,

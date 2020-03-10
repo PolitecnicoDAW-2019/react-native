@@ -1,6 +1,6 @@
 {
 	"expo": {
-		"name": "Tab Navigation Template",
+		"name": "FutNativo: Gestiona tus jugadores",
 		"slug": "demo-react-native",
 		"privacy": "public",
 		"sdkVersion": "36.0.0",
@@ -20,6 +20,11 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true
+		},
+		"android": {
+			"package": "com.politecnico.demoreactnative",
+			"versionCode": 1,
+			"permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
 		}
 	}
 }
