@@ -5,11 +5,11 @@ const ASK_PLAYER_DELETE = '¿Quieres eliminar al jugador?';
 const MAIN_TITLE = 'Fútbol Nativo';
 const EDIT_TITLE = 'Editar jugador';
 const ADD_TITLE = 'Añadir jugador';
-const COLOR_PRIMARY = '#4962f6';
+const COLOR_PRIMARY = '#4361ba';
 const COLOR_WHITE = '#ffffff';
 const PLAYER_IMAGE = 'Sube una imagen';
 const SAVE = 'Guardar';
-const COLOR_PRIMARY_LIGHT = '#566df5';
+const COLOR_PRIMARY_LIGHT = '#4361ba';
 const PERMISSIONS =
 	'Lo siento, se necesita permisos de la cámara para funcionar';
 
